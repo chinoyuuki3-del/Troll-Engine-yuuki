@@ -2,8 +2,24 @@
   "service": "Troll Engine Release Center",
   "schema_version": 1,
   "updated_at": "2026-07-31",
-  "latest": "4.0",
+  "latest": "4.1",
   "releases": [
+    {
+      "version": "4.1",
+      "channel": "stable",
+      "title": "GitHub Release Center Update",
+      "published_at": "2026-07-31",
+      "download_url": "https://raw.githubusercontent.com/chinoyuuki3-del/Troll-Engine-yuuki/main/Troll-Engine-v4.1-GitHub-Release-Center-Update.html",
+      "page_url": "https://github.com/chinoyuuki3-del/Troll-Engine-yuuki",
+      "download_ready": false,
+      "supported": true,
+      "notes": [
+        "GitHubリリースセンターv2",
+        "最新版と過去バージョンの一覧表示",
+        "配信中・準備中ステータス表示",
+        "安全なGitHubダウンロードリンク検証"
+      ]
+    },
     {
       "version": "4.0",
       "channel": "stable",
@@ -17,7 +33,6 @@
         "秘密のオーナーキーによる最高管理者認証",
         "AFTネットの動画・テキスト・ファイル投稿",
         "不適切な表現の検出と自動BAN",
-        "GitHubアップデートセンター",
         "GitHubお知らせ・サービス状況"
       ]
     }
