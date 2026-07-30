@@ -1,10 +1,10 @@
 {
   "app": "Troll Engine",
-  "version": "4.0",
+  "version": "4.1",
   "channel": "stable",
-  "title": "System & Security Update",
+  "title": "GitHub Release Center Update",
   "published_at": "2026-07-31",
-  "download_url": "https://raw.githubusercontent.com/chinoyuuki3-del/Troll-Engine-yuuki/main/Troll-Engine-v4.0-System-Security-Update.html",
+  "download_url": "https://raw.githubusercontent.com/chinoyuuki3-del/Troll-Engine-yuuki/main/Troll-Engine-v4.1-GitHub-Release-Center-Update.html",
   "download_ready": false,
   "page_url": "https://github.com/chinoyuuki3-del/Troll-Engine-yuuki",
   "release_feed_url": "https://raw.githubusercontent.com/chinoyuuki3-del/Troll-Engine-yuuki/main/releases.json",
@@ -12,12 +12,11 @@
   "status_url": "https://raw.githubusercontent.com/chinoyuuki3-del/Troll-Engine-yuuki/main/status.json",
   "check_interval_minutes": 5,
   "notes": [
-    "秘密のオーナーキーによる最高管理者認証",
-    "友達・ユーザーIDのAdmin設定と無制限ブロック",
-    "AFTネットの動画・テキスト・ファイル投稿",
-    "不適切な表現の検出と自動BAN",
-    "GitHubアップデートセンター",
-    "GitHubお知らせ・サービス状況",
-    "GitHubリリース履歴データ"
+    "GitHubリリースセンターv2",
+    "最新版と過去バージョンの一覧表示",
+    "配信中・準備中ステータス表示",
+    "安全なGitHubダウンロードリンク検証",
+    "GitHubお知らせ・サービス状況との連携",
+    "v4.0のシステム＆セキュリティ機能を継続"
   ]
 }
