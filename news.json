@@ -1,6 +1,6 @@
 {
   "service": "Troll Engine News",
-  "updated_at": "2026-07-31T12:00:00+09:00",
+  "updated_at": "2026-07-31T18:00:00+09:00",
   "announcements": [
     {
       "id": "welcome-system-security-v4",
@@ -9,6 +9,14 @@
       "date": "2026-07-31",
       "level": "important",
       "pinned": true
+    },
+    {
+      "id": "github-release-feed-ready",
+      "title": "GitHubリリース一覧の準備完了",
+      "body": "次のアップデートから、GitHubでバージョン履歴とダウンロード情報を管理できるように準備しました。",
+      "date": "2026-07-31",
+      "level": "info",
+      "pinned": false
     },
     {
       "id": "github-news-start",
