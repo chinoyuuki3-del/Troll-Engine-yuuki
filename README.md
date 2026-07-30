@@ -4,9 +4,10 @@ Troll Engineの更新ファイル、お知らせ、サービス状態をGitHub�
 
 ## 現在のバージョン
 
-- バージョン: 4.0
-- コード名: System & Security Update
+- バージョン: 4.1
+- コード名: GitHub Release Center Update
 - チャンネル: Stable
+- 配信状態: HTMLアップロード準備中
 
 ## GitHubサービス
 
@@ -21,7 +22,7 @@ Troll Engineの更新ファイル、お知らせ、サービス状態をGitHub�
 2. `releases.json`へ新しいバージョンを登録します。
 3. `update.json`の最新版情報を更新します。
 4. `news.json`でアップデート開始をお知らせします。
-5. Troll Engineのアップデート画面から最新版を取得します。
+5. Troll Engineのリリースセンターから最新版を取得します。
 
 ## セキュリティ
 
