@@ -1,14 +1,22 @@
 {
   "service": "Troll Engine News",
-  "updated_at": "2026-07-31T18:00:00+09:00",
+  "updated_at": "2026-07-31T19:00:00+09:00",
   "announcements": [
+    {
+      "id": "github-release-center-v41",
+      "title": "v4.1 GitHub Release Center Update",
+      "body": "最新版と過去バージョンを確認できるリリースセンターv2をHTMLへ追加しました。現在はHTML本体のGitHub配信準備中です。",
+      "date": "2026-07-31",
+      "level": "important",
+      "pinned": true
+    },
     {
       "id": "welcome-system-security-v4",
       "title": "システム＆セキュリティ Updateへようこそ",
       "body": "管理者モード、AFTネット、安全フィルター、GitHubアップデートセンターを追加しました。",
       "date": "2026-07-31",
       "level": "important",
-      "pinned": true
+      "pinned": false
     },
     {
       "id": "github-release-feed-ready",
