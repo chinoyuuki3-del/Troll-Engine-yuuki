@@ -1,0 +1,22 @@
+{
+  "service": "Troll Engine News",
+  "updated_at": "2026-07-31T12:00:00+09:00",
+  "announcements": [
+    {
+      "id": "welcome-system-security-v4",
+      "title": "システム＆セキュリティ Updateへようこそ",
+      "body": "管理者モード、AFTネット、安全フィルター、GitHubアップデートセンターを追加しました。",
+      "date": "2026-07-31",
+      "level": "important",
+      "pinned": true
+    },
+    {
+      "id": "github-news-start",
+      "title": "GitHubお知らせサービス開始",
+      "body": "これからはTroll Engineを作り直さなくても、GitHubから最新のお知らせを配信できます。",
+      "date": "2026-07-31",
+      "level": "info",
+      "pinned": false
+    }
+  ]
+}
