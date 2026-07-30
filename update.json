@@ -5,13 +5,19 @@
   "title": "System & Security Update",
   "published_at": "2026-07-31",
   "download_url": "https://raw.githubusercontent.com/chinoyuuki3-del/Troll-Engine-yuuki/main/Troll-Engine-v4.0-System-Security-Update.html",
+  "download_ready": false,
   "page_url": "https://github.com/chinoyuuki3-del/Troll-Engine-yuuki",
+  "release_feed_url": "https://raw.githubusercontent.com/chinoyuuki3-del/Troll-Engine-yuuki/main/releases.json",
+  "news_url": "https://raw.githubusercontent.com/chinoyuuki3-del/Troll-Engine-yuuki/main/news.json",
+  "status_url": "https://raw.githubusercontent.com/chinoyuuki3-del/Troll-Engine-yuuki/main/status.json",
+  "check_interval_minutes": 5,
   "notes": [
     "秘密のオーナーキーによる最高管理者認証",
     "友達・ユーザーIDのAdmin設定と無制限ブロック",
     "AFTネットの動画・テキスト・ファイル投稿",
     "不適切な表現の検出と自動BAN",
     "GitHubアップデートセンター",
-    "GitHubお知らせ・サービス状況"
+    "GitHubお知らせ・サービス状況",
+    "GitHubリリース履歴データ"
   ]
 }
