@@ -4,8 +4,10 @@
   "channel": "stable",
   "title": "GitHub Release Center Update",
   "published_at": "2026-07-31",
-  "download_url": "https://raw.githubusercontent.com/chinoyuuki3-del/Troll-Engine-yuuki/main/Troll-Engine-v4.1-GitHub-Release-Center-Update.html",
+  "download_url": "https://github.com/chinoyuuki3-del/Troll-Engine-yuuki/archive/refs/heads/main.zip",
+  "download_type": "repository_zip",
   "download_ready": true,
+  "package_file": "Troll-Engine-yuuki-main/Troll-Engine-v4.1-GitHub-Release-Center-Update.html",
   "page_url": "https://github.com/chinoyuuki3-del/Troll-Engine-yuuki",
   "release_feed_url": "https://raw.githubusercontent.com/chinoyuuki3-del/Troll-Engine-yuuki/main/releases.json",
   "news_url": "https://raw.githubusercontent.com/chinoyuuki3-del/Troll-Engine-yuuki/main/news.json",
@@ -14,8 +16,8 @@
   "notes": [
     "GitHubリリースセンターv2",
     "最新版と過去バージョンの一覧表示",
+    "旧v4.0からZIPで安全にアップデート",
     "配信中・準備中ステータス表示",
-    "安全なGitHubダウンロードリンク検証",
     "GitHubお知らせ・サービス状況との連携",
     "v4.0のシステム＆セキュリティ機能を継続"
   ]
