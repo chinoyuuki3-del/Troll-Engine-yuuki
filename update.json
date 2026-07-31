@@ -1,27 +1,25 @@
 {
   "app": "Troll Engine",
-  "version": "4.3",
+  "version": "4.11",
   "channel": "stable",
-  "title": "GitHub Live Content Update",
+  "title": "AFT Video & Campaign Center Update",
   "published_at": "2026-07-31",
-  "download_url": "https://github.com/chinoyuuki3-del/Troll-Engine-yuuki/archive/refs/heads/main.zip",
-  "download_type": "legacy_zip_with_html_fallback",
+  "download_url": "https://raw.githubusercontent.com/chinoyuuki3-del/Troll-Engine-yuuki/main/Troll-Engine-v4.11-AFT-Video-Campaign-Center-Update.html",
+  "download_type": "html",
   "download_ready": true,
-  "package_file": "Troll-Engine-yuuki-main/Troll-Engine-v4.3-GitHub-Live-Content-Update.html",
+  "package_file": "Troll-Engine-v4.11-AFT-Video-Campaign-Center-Update.html",
   "page_url": "https://github.com/chinoyuuki3-del/Troll-Engine-yuuki",
-  "release_feed_url": "https://raw.githubusercontent.com/chinoyuuki3-del/Troll-Engine-yuuki/main/releases.json",
-  "projects_url": "https://raw.githubusercontent.com/chinoyuuki3-del/Troll-Engine-yuuki/main/projects.json",
-  "events_url": "https://raw.githubusercontent.com/chinoyuuki3-del/Troll-Engine-yuuki/main/events.json",
-  "themes_url": "https://raw.githubusercontent.com/chinoyuuki3-del/Troll-Engine-yuuki/main/themes.json",
-  "maintenance_url": "https://raw.githubusercontent.com/chinoyuuki3-del/Troll-Engine-yuuki/main/%E3%83%A1%E3%83%B3%E3%83%86%E3%83%8A%E3%83%B3%E3%82%B9.json",
+  "html_download_url": "https://raw.githubusercontent.com/chinoyuuki3-del/Troll-Engine-yuuki/main/Troll-Engine-v4.11-AFT-Video-Campaign-Center-Update.html",
+  "sha256": "ed8b8888c8e408e80c1fa04b73320f80ab6db11501fb83fd819ef3ede2c82421",
+  "size_bytes": 2053103,
   "check_interval_minutes": 5,
   "notes": [
-    "projects.jsonの公式プロジェクト自動更新",
-    "events.jsonのイベント自動更新",
-    "themes.jsonのテーマ自動追加",
-    "メンテナンス.jsonの緊急表示",
-    "4つのデータを5分ごとに自動取得",
-    "HTMLを再アップロードせず内容を更新"
-  ],
-  "html_download_url": "https://raw.githubusercontent.com/chinoyuuki3-del/Troll-Engine-yuuki/main/Troll-Engine-v4.3-GitHub-Live-Content-Update.html"
+    "AFT動画タブを追加",
+    "HTML内から動画を端末へ投稿",
+    "vdao公開動画を全員が5秒ごとに確認",
+    "通常コメントと流れるコメント",
+    "動画通報と端末内非表示",
+    "管理者キャンペーンセンター",
+    "Mega Storeセール・ライブ記念・週末セール・クリエイター応援祭・カスタムキャンペーン"
+  ]
 }
