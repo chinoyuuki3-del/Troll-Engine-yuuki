@@ -1,10 +1,28 @@
 {
   "service": "Troll Engine Central Release Center",
-  "schema_version": 4,
+  "schema_version": 5,
   "updated_at": "2026-07-31",
   "repository": "chinoyuuki3-del/Troll-Engine-yuuki",
-  "latest": "4.10",
+  "latest": "4.11",
   "releases": [
+    {
+      "version": "4.11",
+      "channel": "stable",
+      "title": "AFT Video & Campaign Center Update",
+      "published_at": "2026-07-31",
+      "download_ready": true,
+      "download_url": "https://raw.githubusercontent.com/chinoyuuki3-del/Troll-Engine-yuuki/main/releases/Troll-Engine-v4.11-AFT-Video-Campaign-Center-Update.html",
+      "sha256": "ed8b8888c8e408e80c1fa04b73320f80ab6db11501fb83fd819ef3ede2c82421",
+      "size_bytes": 2053103,
+      "notes": [
+        "AFT動画タブ",
+        "一般動画投稿",
+        "コメント・流れるコメント",
+        "vdao公開動画",
+        "5種類のキャンペーンセンター",
+        "価格1000〜3000コイン"
+      ]
+    },
     {
       "version": "4.10",
       "channel": "stable",
@@ -16,23 +34,7 @@
       "size_bytes": 2031022,
       "notes": [
         "約1000本のMega Store",
-        "P2P映像・音声ライブ",
-        "端末内の過去配信自動録画",
-        "一般ユーザー向けAFT動画アーカイブ",
-        "GitHubライブ文章配信"
-      ]
-    },
-    {
-      "version": "4.9",
-      "channel": "stable",
-      "title": "GitHub All-in-One Storage Update",
-      "published_at": "2026-07-31",
-      "download_ready": true,
-      "download_url": "https://raw.githubusercontent.com/chinoyuuki3-del/Troll-Engine-yuuki/main/releases/Troll-Engine-v4.9-GitHub-All-in-One-Storage-Update.html",
-      "sha256": "5b0e6a2fd7d211ac47eb0534b2ae2e48e067dd58c4cde6aa70d18858fd179918",
-      "size_bytes": 2005819,
-      "notes": [
-        "全端末共通データをTroll-Engine-yuukiへ集約"
+        "P2P映像・音声ライブ"
       ]
     }
   ]
