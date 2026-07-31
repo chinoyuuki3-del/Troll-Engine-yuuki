@@ -1,0 +1,42 @@
+name: Troll Engine yuuki owner control
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: troll-engine-yuuki-owner-control
+  cancel-in-progress: false
+
+jobs:
+  update-management:
+    if: github.actor == 'chinoyuuki3-del' && startsWith(github.event.issue.title, '[Troll管理]')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate owner command
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: python3 scripts/admin-control.py
+
+      - name: Commit management data
+        run: |
+          git config user.name "Troll Engine yuuki Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data
+          git commit -m "Troll Engine yuuki 管理更新"
+          git push
+
+      - name: Close command
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ISSUE_URL: ${{ github.event.issue.html_url }}
+        run: |
+          gh issue comment "$ISSUE_URL" --body "管理操作を反映しました。端末側は約5秒ごとに確認します。"
+          gh issue close "$ISSUE_URL" --reason completed
