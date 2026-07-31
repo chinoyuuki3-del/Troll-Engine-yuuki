@@ -1,11 +1,13 @@
 {
   "service": "Troll Engine Status",
   "overall": "operational",
-  "message": "すべてのサービスは正常に動作しています。",
-  "updated_at": "2026-07-31T12:00:00+09:00",
+  "message": "すべてのGitHub運営サービスは正常に動作しています。",
+  "updated_at": "2026-07-31T20:10:00+09:00",
   "services": [
     { "name": "GitHubアップデート", "status": "operational" },
     { "name": "GitHubお知らせ", "status": "operational" },
+    { "name": "GitHub運営コントロール", "status": "operational" },
+    { "name": "GitHub安全ルール", "status": "operational" },
     { "name": "AFTネット", "status": "operational" },
     { "name": "Troll Engine本体", "status": "operational" }
   ]
