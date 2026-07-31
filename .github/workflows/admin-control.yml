@@ -23,14 +23,19 @@ jobs:
         env:
           ISSUE_BODY: ${{ github.event.issue.body }}
           ISSUE_NUMBER: ${{ github.event.issue.number }}
-        run: python3 scripts/admin-control.py
+        run: |
+          if printf '%s\n' "$ISSUE_BODY" | grep -q '^ACTION: aft_video_publish'; then
+            python3 scripts/aft-video-publish.py
+          else
+            python3 scripts/admin-control.py
+          fi
 
       - name: Commit management data
         run: |
           git config user.name "Troll Engine yuuki Bot"
           git config user.email "actions@users.noreply.github.com"
           git add data
-          git commit -m "Troll Engine yuuki 管理更新"
+          git diff --cached --quiet || git commit -m "Troll Engine yuuki 管理更新"
           git push
 
       - name: Close command
@@ -38,5 +43,5 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           ISSUE_URL: ${{ github.event.issue.html_url }}
         run: |
-          gh issue comment "$ISSUE_URL" --body "管理操作を反映しました。端末側は約5秒ごとに確認します。"
+          gh issue comment "$ISSUE_URL" --body "管理操作を反映しました。端末側は約15秒ごとに確認します。"
           gh issue close "$ISSUE_URL" --reason completed
