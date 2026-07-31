@@ -93,5 +93,43 @@ elif action == "badge_award":
     data["updated_at"] = iso()
     save(path, data)
 
+elif action == "live_publish":
+    path = "data/live-messages.json"
+    data = load(path)
+    data.setdefault("messages", []).insert(0, {
+        "id": update_id,
+        "title": safe_text(field("TITLE", "ライブお知らせ"), 100),
+        "message": safe_text(field("MESSAGE", ""), 1200),
+        "author": "Troll Engine Owner",
+        "created_at": iso(),
+        "pinned": parse_bool(field("PINNED", "false")),
+    })
+    data["messages"] = [item for item in data["messages"] if item.get("message")][:30]
+    data.update({"enabled": True, "updated_at": iso()})
+    save(path, data)
+
+elif action == "aft_video_publish":
+    path = "data/aft-videos.json"
+    data = load(path)
+    video_url = field("VIDEO_URL")
+    allowed = (
+        re.fullmatch(r"https://github\.com/chinoyuuki3-del/Troll-Engine-yuuki/releases/download/[^\s]+", video_url)
+        or re.fullmatch(r"https://raw\.githubusercontent\.com/chinoyuuki3-del/Troll-Engine-yuuki/[^\s]+", video_url)
+    )
+    if not allowed:
+        raise SystemExit("VIDEO_URLはTroll-Engine-yuukiのGitHub動画URLを指定してください。")
+    data.setdefault("videos", []).insert(0, {
+        "id": update_id,
+        "title": safe_text(field("TITLE", "過去のライブ配信"), 100),
+        "description": safe_text(field("DESCRIPTION", "Troll Liveの過去配信です。"), 500),
+        "video_url": video_url,
+        "thumbnail_url": "",
+        "author": "Troll Engine Owner",
+        "published_at": iso(),
+    })
+    data["videos"] = data["videos"][:100]
+    data.update({"enabled": True, "updated_at": iso()})
+    save(path, data)
+
 else:
     raise SystemExit("ACTIONが対応していません。")
