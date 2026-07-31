@@ -40,17 +40,17 @@
     }
   },
   "active": {
-    "id": "github-6-1785487050",
-    "campaign_id": "live_memorial",
-    "name": "ライブ記念キャンペーン",
-    "icon": "📺",
-    "discount_percent": 15,
-    "target": "live-featured",
+    "id": "github-7-1785487130",
+    "campaign_id": "custom",
+    "name": "さ",
+    "icon": "🛠️",
+    "discount_percent": 50,
+    "target": "custom",
     "status": "active",
-    "starts_at": "2026-07-31T08:37:30Z",
-    "ends_at": "2026-07-31T11:37:30Z",
-    "updated_at": "2026-07-31T08:37:30Z"
+    "starts_at": "2026-07-31T08:38:50Z",
+    "ends_at": "2026-07-31T09:38:50Z",
+    "updated_at": "2026-07-31T08:38:50Z"
   },
   "history": [],
-  "updated_at": "2026-07-31T08:37:30Z"
+  "updated_at": "2026-07-31T08:38:50Z"
 }
