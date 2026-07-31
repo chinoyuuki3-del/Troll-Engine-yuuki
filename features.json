@@ -1,0 +1,18 @@
+{
+  "service": "Troll Engine Feature Control",
+  "schema_version": 1,
+  "updated_at": "2026-07-31T20:00:00+09:00",
+  "refresh_minutes": 5,
+  "maintenance": {
+    "enabled": false,
+    "message": "現在メンテナンス中です。しばらくしてからもう一度お試しください。"
+  },
+  "features": {
+    "aft_net": true,
+    "chat": true,
+    "file_uploads": true,
+    "github_news": true,
+    "release_center": true,
+    "admin_mode": true
+  }
+}
