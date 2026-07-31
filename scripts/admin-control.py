@@ -131,5 +131,48 @@ elif action == "aft_video_publish":
     data.update({"enabled": True, "updated_at": iso()})
     save(path, data)
 
+elif action in {"campaign_start", "campaign_pause", "campaign_resume", "campaign_stop"}:
+    path = "data/campaigns.json"
+    data = load(path)
+    active = data.get("active")
+    if action == "campaign_start":
+        campaign_id = field("CAMPAIGN", "custom")
+        preset = data.get("presets", {}).get(campaign_id)
+        if not preset:
+            raise SystemExit("CAMPAIGNが登録されていません。")
+        minutes = int(field("MINUTES", str(preset.get("duration_minutes", 60))))
+        if not 1 <= minutes <= 10080:
+            raise SystemExit("MINUTESは1〜10080で指定してください。")
+        discount = int(field("DISCOUNT", str(preset.get("discount_percent", 10))))
+        if not 0 <= discount <= 50:
+            raise SystemExit("DISCOUNTは0〜50で指定してください。")
+        active = {
+            "id": update_id,
+            "campaign_id": campaign_id,
+            "name": safe_text(field("TITLE", preset.get("name", "キャンペーン")), 100),
+            "icon": preset.get("icon", "🎉"),
+            "discount_percent": discount,
+            "target": preset.get("target", "all-store"),
+            "status": "active",
+            "starts_at": iso(),
+            "ends_at": iso(NOW + timedelta(minutes=minutes)),
+            "updated_at": iso(),
+        }
+        data["active"] = active
+    elif action == "campaign_pause":
+        if active:
+            active.update({"status": "paused", "updated_at": iso()})
+    elif action == "campaign_resume":
+        if active:
+            active.update({"status": "active", "updated_at": iso()})
+    else:
+        if active:
+            active.update({"status": "ended", "ended_at": iso(), "updated_at": iso()})
+            data.setdefault("history", []).insert(0, active)
+            data["history"] = data["history"][:30]
+        data["active"] = None
+    data["updated_at"] = iso()
+    save(path, data)
+
 else:
     raise SystemExit("ACTIONが対応していません。")
