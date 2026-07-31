@@ -1,0 +1,34 @@
+{
+  "update_id": "initial",
+  "updated_at": "2026-07-31T00:00:00+09:00",
+  "features": {
+    "user_search": {
+      "enabled": true,
+      "reason": ""
+    },
+    "aft_cloud": {
+      "enabled": true,
+      "reason": ""
+    },
+    "file_upload": {
+      "enabled": true,
+      "reason": ""
+    },
+    "voice_call": {
+      "enabled": true,
+      "reason": ""
+    },
+    "location_share": {
+      "enabled": true,
+      "reason": ""
+    },
+    "shopping": {
+      "enabled": true,
+      "reason": ""
+    },
+    "test_channel": {
+      "enabled": true,
+      "reason": ""
+    }
+  }
+}
