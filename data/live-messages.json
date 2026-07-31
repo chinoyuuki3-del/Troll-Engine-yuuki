@@ -4,6 +4,14 @@
   "enabled": true,
   "messages": [
     {
+      "id": "github-9-1785493438",
+      "title": "こんばんは",
+      "message": "こんばんは",
+      "author": "Troll Engine Owner",
+      "created_at": "2026-07-31T10:23:58Z",
+      "pinned": false
+    },
+    {
       "id": "github-4-1785485005",
       "title": "こんにちは",
       "message": "あああ",
@@ -20,5 +28,5 @@
       "pinned": true
     }
   ],
-  "updated_at": "2026-07-31T08:03:25Z"
+  "updated_at": "2026-07-31T10:23:58Z"
 }
