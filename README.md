@@ -1,11 +1,11 @@
 # Troll Engine Yuuki
 
-Troll Engineの更新ファイル、お知らせ、サービス状態をGitHubで管理するリポジトリです。
+Troll Engineの更新、お知らせ、安全ルール、機能スイッチをGitHubで管理するリポジトリです。
 
 ## 現在のバージョン
 
-- バージョン: 4.1
-- コード名: GitHub Release Center Update
+- バージョン: 4.2
+- コード名: GitHub Operations Control Update
 - チャンネル: Stable
 - 配信状態: HTMLアップロード準備中
 
@@ -15,15 +15,20 @@ Troll Engineの更新ファイル、お知らせ、サービス状態をGitHub�
 - `releases.json` — バージョン履歴とダウンロード情報
 - `news.json` — Troll Engine内のお知らせ
 - `status.json` — サービスの稼働状況
+- `features.json` — 機能の公開・停止とメンテナンス
+- `safety-rules.json` — 追加安全ルールとBAN時間
+
+## v4.2運営コントロール
+
+Troll Engineは5分ごとにGitHub設定を確認します。GitHubへ接続できない場合は、保存済み設定または安全な初期設定を使います。基本安全フィルターはGitHub設定に関係なく常に有効です。
 
 ## 更新の流れ
 
-1. 新しいTroll EngineのHTMLをこのリポジトリへ追加します。
-2. `releases.json`へ新しいバージョンを登録します。
-3. `update.json`の最新版情報を更新します。
-4. `news.json`でアップデート開始をお知らせします。
-5. Troll Engineのリリースセンターから最新版を取得します。
+1. 新しいHTMLをリポジトリへ追加します。
+2. `update.json`と`releases.json`へ新しいバージョンを登録します。
+3. `news.json`でアップデートをお知らせします。
+4. HTMLのアップロード確認後に`download_ready`を`true`へ変更します。
 
 ## セキュリティ
 
-秘密のオーナーキー、パスワード、個人情報はGitHubへ保存しません。
+秘密のオーナーキー、パスワード、ユーザー名、個人情報はGitHubへ保存しません。
