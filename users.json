@@ -3,8 +3,29 @@
   "schema_version": 1,
   "updated_at": "2026-07-31",
   "privacy": {
-    "public_fields": ["id", "username", "status", "searchable", "ban_until"],
-    "forbidden_fields": ["email", "password", "owner_key", "access_token", "address", "location"]
+    "public_fields": [
+      "id",
+      "username",
+      "status",
+      "searchable",
+      "ban_until"
+    ],
+    "forbidden_fields": [
+      "email",
+      "password",
+      "owner_key",
+      "access_token",
+      "address",
+      "location"
+    ]
   },
-  "users": []
+  "users": [
+    {
+      "id": "fc-746ff05f-8041-4b1b-93cc-5df920db48a2",
+      "username": "123",
+      "status": "active",
+      "searchable": true,
+      "ban_until": 0
+    }
+  ]
 }
