@@ -1,0 +1,8 @@
+{
+  "service": "Troll Engine AFT Videos",
+  "schema_version": 1,
+  "enabled": true,
+  "visibility": "public-to-troll-engine-users",
+  "videos": [],
+  "updated_at": "2026-07-31"
+}
