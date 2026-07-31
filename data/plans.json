@@ -1,0 +1,25 @@
+{
+  "plans": {
+    "free": {
+      "name": "Free",
+      "quota_bytes": 5242880
+    },
+    "standard": {
+      "name": "Standard",
+      "quota_bytes": 26214400
+    },
+    "plus": {
+      "name": "Plus",
+      "quota_bytes": 104857600
+    },
+    "pro": {
+      "name": "Pro",
+      "quota_bytes": 262144000
+    },
+    "owner": {
+      "name": "Owner",
+      "quota_bytes": 524288000
+    }
+  },
+  "updated_at": "2026-07-31T00:00:00+09:00"
+}
