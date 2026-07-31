@@ -1,9 +1,13 @@
 {
-  "service": "Troll Engine yuuki 管理サーバー",
-  "schema_version": 1,
+  "service": "Troll Engine yuuki 中央管理・保存サーバー",
+  "schema_version": 2,
   "channel": "stable",
+  "current_version": "4.9",
+  "central_storage": true,
   "poll_interval_seconds": 5,
-  "updated_at": "2026-07-31T00:00:00+09:00",
+  "updated_at": "2026-07-31",
   "public_data_only": true,
+  "owner_write_only": true,
+  "client_access": "read-only",
   "owner_github": "chinoyuuki3-del"
 }
