@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Troll Engine v4.3</title>
+<style>
+html,body{height:100%;margin:0}body{display:grid;place-items:center;background:#06101f;color:#eaf6ff;font-family:system-ui,sans-serif}.card{width:min(560px,calc(100% - 40px));padding:28px;border:1px solid #1ad6a3;border-radius:18px;background:#10233e;text-align:center;box-shadow:0 18px 70px #0008}h1{color:#43c8ff;margin:0 0 12px}.bar{height:10px;border-radius:9px;background:#071426;overflow:hidden;margin:20px 0}.bar span{display:block;width:42%;height:100%;background:linear-gradient(90deg,#20d57b,#28b9ff);animation:load 1.2s infinite ease-in-out}@keyframes load{0%{transform:translateX(-120%)}100%{transform:translateX(340%)}}button,a{display:inline-block;margin:8px;padding:11px 18px;border:0;border-radius:10px;background:#1ccb78;color:#04120c;font-weight:800;text-decoration:none;cursor:pointer}.error{color:#ff8f9b;white-space:pre-wrap}
+</style>
+</head>
+<body>
+<main class="card">
+<h1>⬆ Troll Engine v4.3</h1>
+<p id="status">アップデート本体を読み込んでいます…</p>
+<div class="bar" id="bar"><span></span></div>
+<div id="actions"></div>
+</main>
+<script>
+(async function boot(){
+  const payload='https://raw.githubusercontent.com/chinoyuuki3-del/Troll-Engine-yuuki/main/releases/v4.3.payload.gz.b64?v=20260731';
+  const status=document.getElementById('status');
+  const actions=document.getElementById('actions');
+  try{
+    if(!('DecompressionStream' in window)) throw new Error('このブラウザは自動展開に対応していません。EdgeまたはChromeを最新版にしてください。');
+    const response=await fetch(payload,{cache:'no-store'});
+    if(!response.ok) throw new Error('更新データを取得できませんでした（HTTP '+response.status+'）');
+    status.textContent='アップデートを展開しています…';
+    const encoded=(await response.text()).replace(/\s/g,'');
+    const binary=atob(encoded);
+    const bytes=new Uint8Array(binary.length);
+    for(let i=0;i<binary.length;i++) bytes[i]=binary.charCodeAt(i);
+    const stream=new Blob([bytes]).stream().pipeThrough(new DecompressionStream('gzip'));
+    const html=await new Response(stream).text();
+    if(!/^\s*<!DOCTYPE html>/i.test(html)||!html.includes('troll-engine-class-version')) throw new Error('更新データの検証に失敗しました。');
+    document.open();
+    document.write(html);
+    document.close();
+  }catch(error){
+    document.getElementById('bar').hidden=true;
+    status.className='error';
+    status.textContent='自動更新を起動できませんでした。\n'+(error&&error.message?error.message:String(error));
+    actions.innerHTML='<button type="button" id="retry">もう一度試す</button><a href="https://github.com/chinoyuuki3-del/Troll-Engine-yuuki">GitHubを開く</a>';
+    document.getElementById('retry').onclick=()=>location.reload();
+  }
+})();
+</script>
+</body>
+</html>
