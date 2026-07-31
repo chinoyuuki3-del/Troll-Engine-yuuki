@@ -1,24 +1,26 @@
 {
   "app": "Troll Engine",
-  "version": "4.1",
+  "version": "4.2",
   "channel": "stable",
-  "title": "GitHub Release Center Update",
+  "title": "GitHub Operations Control Update",
   "published_at": "2026-07-31",
   "download_url": "https://github.com/chinoyuuki3-del/Troll-Engine-yuuki/archive/refs/heads/main.zip",
   "download_type": "repository_zip",
-  "download_ready": true,
-  "package_file": "Troll-Engine-yuuki-main/Troll-Engine-v4.1-GitHub-Release-Center-Update.html",
+  "download_ready": false,
+  "package_file": "Troll-Engine-yuuki-main/Troll-Engine-v4.2-GitHub-Operations-Control-Update.html",
   "page_url": "https://github.com/chinoyuuki3-del/Troll-Engine-yuuki",
   "release_feed_url": "https://raw.githubusercontent.com/chinoyuuki3-del/Troll-Engine-yuuki/main/releases.json",
   "news_url": "https://raw.githubusercontent.com/chinoyuuki3-del/Troll-Engine-yuuki/main/news.json",
   "status_url": "https://raw.githubusercontent.com/chinoyuuki3-del/Troll-Engine-yuuki/main/status.json",
+  "features_url": "https://raw.githubusercontent.com/chinoyuuki3-del/Troll-Engine-yuuki/main/features.json",
+  "safety_rules_url": "https://raw.githubusercontent.com/chinoyuuki3-del/Troll-Engine-yuuki/main/safety-rules.json",
   "check_interval_minutes": 5,
   "notes": [
-    "GitHubリリースセンターv2",
-    "最新版と過去バージョンの一覧表示",
-    "旧v4.0からZIPで安全にアップデート",
-    "配信中・準備中ステータス表示",
-    "GitHubお知らせ・サービス状況との連携",
-    "v4.0のシステム＆セキュリティ機能を継続"
+    "GitHub運営コントロール画面",
+    "機能の公開・停止をGitHubから変更",
+    "緊急メンテナンス表示",
+    "追加安全ルールとBAN時間のオンライン更新",
+    "5分ごとの自動同期とオフラインキャッシュ",
+    "基本安全フィルターは常時有効"
   ]
 }
