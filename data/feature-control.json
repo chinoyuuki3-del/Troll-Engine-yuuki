@@ -1,6 +1,6 @@
 {
-  "update_id": "initial",
-  "updated_at": "2026-07-31T00:00:00+09:00",
+  "update_id": "v4-10-live-store",
+  "updated_at": "2026-07-31",
   "features": {
     "user_search": {
       "enabled": true,
@@ -25,6 +25,18 @@
     "shopping": {
       "enabled": true,
       "reason": ""
+    },
+    "store_catalog": {
+      "enabled": true,
+      "reason": "約1000本を公開中"
+    },
+    "live_broadcast": {
+      "enabled": true,
+      "reason": "P2Pライブ配信"
+    },
+    "aft_videos": {
+      "enabled": true,
+      "reason": "一般ユーザーへ過去配信を公開"
     },
     "test_channel": {
       "enabled": true,
