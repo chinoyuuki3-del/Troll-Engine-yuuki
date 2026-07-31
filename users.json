@@ -26,6 +26,13 @@
       "status": "active",
       "searchable": true,
       "ban_until": 0
+    },
+    {
+      "id": "fc-345f904f-a526-4032-81a1-340032a9df3d",
+      "username": "1234",
+      "status": "active",
+      "searchable": true,
+      "ban_until": 0
     }
   ]
 }
