@@ -1,0 +1,16 @@
+{
+  "service": "Troll Engine Live Messages",
+  "schema_version": 1,
+  "enabled": true,
+  "messages": [
+    {
+      "id": "live-v4-10-start",
+      "title": "Troll Liveへようこそ",
+      "message": "ライブ文章、映像・音声配信、AFT動画・過去ライブに対応しました。",
+      "author": "Troll Engine Owner",
+      "created_at": "2026-07-31T00:00:00Z",
+      "pinned": true
+    }
+  ],
+  "updated_at": "2026-07-31"
+}
