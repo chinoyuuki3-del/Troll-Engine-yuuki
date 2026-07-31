@@ -1,0 +1,32 @@
+{
+  "service": "Troll Engine Themes",
+  "schema_version": 1,
+  "updated_at": "2026-07-31T20:30:00+09:00",
+  "default_theme": "standard-blue",
+  "themes": [
+    {
+      "id": "standard-blue",
+      "name": "STANDARD BLUE",
+      "accent": "#38bdf8",
+      "accent2": "#22c55e",
+      "panel": "#0f172a",
+      "background": "#020617"
+    },
+    {
+      "id": "operations-purple",
+      "name": "OPERATIONS PURPLE",
+      "accent": "#c084fc",
+      "accent2": "#22d3ee",
+      "panel": "#171127",
+      "background": "#070311"
+    },
+    {
+      "id": "security-green",
+      "name": "SECURITY GREEN",
+      "accent": "#4ade80",
+      "accent2": "#facc15",
+      "panel": "#0b1f17",
+      "background": "#020b07"
+    }
+  ]
+}
