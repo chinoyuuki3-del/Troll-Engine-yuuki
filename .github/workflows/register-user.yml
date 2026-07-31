@@ -1,0 +1,42 @@
+name: Troll Engine user registration
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: troll-engine-user-directory
+  cancel-in-progress: false
+
+jobs:
+  register:
+    if: startsWith(github.event.issue.title, '[Troll Engine登録]')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout directory
+        uses: actions/checkout@v4
+
+      - name: Validate and register user
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+        run: python3 scripts/register-user.py
+
+      - name: Commit users.json
+        run: |
+          git config user.name "Troll Engine Registration Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add users.json
+          git commit -m "ユーザー検索ディレクトリへ登録"
+          git push
+
+      - name: Finish registration
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ISSUE_URL: ${{ github.event.issue.html_url }}
+        run: |
+          gh issue comment "$ISSUE_URL" --body "Troll Engineのユーザー検索へ登録しました。反映まで少し待ってから、HTML側で「一覧を更新」を押してください。"
+          gh issue close "$ISSUE_URL" --reason completed
