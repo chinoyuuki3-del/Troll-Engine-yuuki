@@ -1,0 +1,13 @@
+{
+  "service": "Troll Engine Safety Rules",
+  "schema_version": 1,
+  "updated_at": "2026-07-31T20:00:00+09:00",
+  "enabled": true,
+  "blocked_terms": [],
+  "ban_minutes": {
+    "2": 10,
+    "3": 1440,
+    "4": 10080
+  },
+  "message": "安全ルールはGitHubから最新状態へ更新されます。"
+}
