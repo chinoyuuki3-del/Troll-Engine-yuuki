@@ -1,10 +1,13 @@
 {
   "enabled": false,
-  "update_id": "initial",
-  "starts_at": null,
-  "ends_at": null,
-  "message": "通常稼働中です。",
-  "work": [],
+  "update_id": "maintenance-20260801-0000",
+  "starts_at": "2026-08-01T00:00:00+09:00",
+  "ends_at": "2026-08-01T06:00:00+09:00",
+  "message": "8月1日 0:00～6:00はメンテナンスを行います。",
+  "work": [
+    "AFT動画とライブ機能の確認",
+    "GitHub同期の確認"
+  ],
   "updated_by": "chinoyuuki3-del",
-  "updated_at": "2026-07-31T00:00:00+09:00"
+  "updated_at": "2026-07-31T17:44:49+09:00"
 }
