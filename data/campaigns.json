@@ -40,17 +40,17 @@
     }
   },
   "active": {
-    "id": "github-7-1785487130",
-    "campaign_id": "custom",
-    "name": "さ",
-    "icon": "🛠️",
-    "discount_percent": 50,
-    "target": "custom",
+    "id": "github-8-1785493329",
+    "campaign_id": "mega_store_sale",
+    "name": "Mega Storeセール",
+    "icon": "🛍️",
+    "discount_percent": 15,
+    "target": "all-store",
     "status": "active",
-    "starts_at": "2026-07-31T08:38:50Z",
-    "ends_at": "2026-07-31T09:38:50Z",
-    "updated_at": "2026-07-31T08:38:50Z"
+    "starts_at": "2026-07-31T10:22:09Z",
+    "ends_at": "2026-08-01T10:22:09Z",
+    "updated_at": "2026-07-31T10:22:09Z"
   },
   "history": [],
-  "updated_at": "2026-07-31T08:38:50Z"
+  "updated_at": "2026-07-31T10:22:09Z"
 }
