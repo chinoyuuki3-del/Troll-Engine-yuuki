@@ -26,6 +26,8 @@ jobs:
         run: |
           if printf '%s\n' "$ISSUE_BODY" | grep -q '^ACTION: aft_video_publish'; then
             python3 scripts/aft-video-publish.py
+          elif printf '%s\n' "$ISSUE_BODY" | grep -Eq '^ACTION: public_world_(publish|delete)'; then
+            python3 scripts/public-world-publish.py
           else
             python3 scripts/admin-control.py
           fi
