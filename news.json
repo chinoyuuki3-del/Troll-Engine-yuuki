@@ -1,35 +1,27 @@
 {
   "service": "Troll Engine News",
-  "updated_at": "2026-07-31T19:00:00+09:00",
+  "updated_at": "2026-07-31T20:10:00+09:00",
   "announcements": [
     {
-      "id": "github-release-center-v41",
-      "title": "v4.1 GitHub Release Center Update",
-      "body": "最新版と過去バージョンを確認できるリリースセンターv2をHTMLへ追加しました。現在はHTML本体のGitHub配信準備中です。",
+      "id": "github-operations-control-v42",
+      "title": "v4.2 GitHub Operations Controlへ移行",
+      "body": "機能の公開・停止、緊急メンテナンス、追加安全ルールをGitHubから変更できる運営コントロールへ移行しました。HTML本体は配信準備中です。",
       "date": "2026-07-31",
       "level": "important",
       "pinned": true
     },
     {
-      "id": "welcome-system-security-v4",
-      "title": "システム＆セキュリティ Updateへようこそ",
-      "body": "管理者モード、AFTネット、安全フィルター、GitHubアップデートセンターを追加しました。",
-      "date": "2026-07-31",
-      "level": "important",
-      "pinned": false
-    },
-    {
-      "id": "github-release-feed-ready",
-      "title": "GitHubリリース一覧の準備完了",
-      "body": "次のアップデートから、GitHubでバージョン履歴とダウンロード情報を管理できるように準備しました。",
+      "id": "github-release-center-v41",
+      "title": "v4.1 GitHub Release Center Update",
+      "body": "最新版と過去バージョンを確認できるリリースセンターv2を追加しました。",
       "date": "2026-07-31",
       "level": "info",
       "pinned": false
     },
     {
-      "id": "github-news-start",
-      "title": "GitHubお知らせサービス開始",
-      "body": "これからはTroll Engineを作り直さなくても、GitHubから最新のお知らせを配信できます。",
+      "id": "welcome-system-security-v4",
+      "title": "システム＆セキュリティ Updateへようこそ",
+      "body": "管理者モード、AFTネット、安全フィルター、GitHubアップデートセンターを追加しました。",
       "date": "2026-07-31",
       "level": "info",
       "pinned": false
