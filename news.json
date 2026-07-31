@@ -1,27 +1,27 @@
 {
   "service": "Troll Engine News",
-  "updated_at": "2026-07-31T20:10:00+09:00",
+  "updated_at": "2026-07-31T20:45:00+09:00",
   "announcements": [
     {
-      "id": "github-operations-control-v42",
-      "title": "v4.2 GitHub Operations Controlへ移行",
-      "body": "機能の公開・停止、緊急メンテナンス、追加安全ルールをGitHubから変更できる運営コントロールへ移行しました。HTML本体は配信準備中です。",
+      "id": "github-live-content-v43",
+      "title": "v4.3 GitHub Live Content Update",
+      "body": "projects.json、events.json、themes.json、メンテナンス.jsonを追加しました。v4.3では4つの内容を5分ごとに自動更新します。",
       "date": "2026-07-31",
       "level": "important",
       "pinned": true
     },
     {
-      "id": "github-release-center-v41",
-      "title": "v4.1 GitHub Release Center Update",
-      "body": "最新版と過去バージョンを確認できるリリースセンターv2を追加しました。",
+      "id": "github-operations-control-v42",
+      "title": "v4.2 GitHub Operations Controlへ移行",
+      "body": "機能の公開・停止、緊急メンテナンス、追加安全ルールをGitHubから変更できる運営コントロールへ移行しました。",
       "date": "2026-07-31",
       "level": "info",
       "pinned": false
     },
     {
-      "id": "welcome-system-security-v4",
-      "title": "システム＆セキュリティ Updateへようこそ",
-      "body": "管理者モード、AFTネット、安全フィルター、GitHubアップデートセンターを追加しました。",
+      "id": "github-release-center-v41",
+      "title": "v4.1 GitHub Release Center Update",
+      "body": "最新版と過去バージョンを確認できるリリースセンターv2を追加しました。",
       "date": "2026-07-31",
       "level": "info",
       "pinned": false
