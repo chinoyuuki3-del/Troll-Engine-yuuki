@@ -40,17 +40,17 @@
     }
   },
   "active": {
-    "id": "github-5-1785486956",
-    "campaign_id": "mega_store_sale",
-    "name": "Mega Storeセール",
-    "icon": "🛍️",
+    "id": "github-6-1785487050",
+    "campaign_id": "live_memorial",
+    "name": "ライブ記念キャンペーン",
+    "icon": "📺",
     "discount_percent": 15,
-    "target": "all-store",
+    "target": "live-featured",
     "status": "active",
-    "starts_at": "2026-07-31T08:35:56Z",
-    "ends_at": "2026-08-01T08:35:56Z",
-    "updated_at": "2026-07-31T08:35:56Z"
+    "starts_at": "2026-07-31T08:37:30Z",
+    "ends_at": "2026-07-31T11:37:30Z",
+    "updated_at": "2026-07-31T08:37:30Z"
   },
   "history": [],
-  "updated_at": "2026-07-31T08:35:56Z"
+  "updated_at": "2026-07-31T08:37:30Z"
 }
