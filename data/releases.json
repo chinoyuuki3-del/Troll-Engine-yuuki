@@ -1,10 +1,27 @@
 {
   "service": "Troll Engine Central Release Center",
-  "schema_version": 3,
+  "schema_version": 4,
   "updated_at": "2026-07-31",
   "repository": "chinoyuuki3-del/Troll-Engine-yuuki",
-  "latest": "4.9",
+  "latest": "4.10",
   "releases": [
+    {
+      "version": "4.10",
+      "channel": "stable",
+      "title": "Mega Store & Live Broadcast Update",
+      "published_at": "2026-07-31",
+      "download_ready": true,
+      "download_url": "https://raw.githubusercontent.com/chinoyuuki3-del/Troll-Engine-yuuki/main/releases/Troll-Engine-v4.10-Mega-Store-Live-Broadcast-Update.html",
+      "sha256": "7142857b2b7ab4c0fe5b551d0d6ee1d95e1801fda760e46e12d40467b127a1e6",
+      "size_bytes": 2031022,
+      "notes": [
+        "約1000本のMega Store",
+        "P2P映像・音声ライブ",
+        "端末内の過去配信自動録画",
+        "一般ユーザー向けAFT動画アーカイブ",
+        "GitHubライブ文章配信"
+      ]
+    },
     {
       "version": "4.9",
       "channel": "stable",
@@ -15,9 +32,7 @@
       "sha256": "5b0e6a2fd7d211ac47eb0534b2ae2e48e067dd58c4cde6aa70d18858fd179918",
       "size_bytes": 2005819,
       "notes": [
-        "全端末共通データをTroll-Engine-yuukiへ集約",
-        "更新センターと友達招待設定の参照先を統一",
-        "個人データは端末内または友達との直接接続のまま保護"
+        "全端末共通データをTroll-Engine-yuukiへ集約"
       ]
     }
   ]
