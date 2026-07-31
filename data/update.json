@@ -1,22 +1,23 @@
 {
   "app": "Troll Engine",
-  "schema_version": 4,
-  "version": "4.10",
+  "schema_version": 5,
+  "version": "4.11",
   "channel": "stable",
-  "title": "Mega Store & Live Broadcast Update",
+  "title": "AFT Video & Campaign Center Update",
   "published_at": "2026-07-31",
   "download_ready": true,
   "repository": "chinoyuuki3-del/Troll-Engine-yuuki",
-  "download_url": "https://raw.githubusercontent.com/chinoyuuki3-del/Troll-Engine-yuuki/main/releases/Troll-Engine-v4.10-Mega-Store-Live-Broadcast-Update.html",
-  "sha256": "7142857b2b7ab4c0fe5b551d0d6ee1d95e1801fda760e46e12d40467b127a1e6",
-  "size_bytes": 2031022,
+  "download_url": "https://raw.githubusercontent.com/chinoyuuki3-del/Troll-Engine-yuuki/main/releases/Troll-Engine-v4.11-AFT-Video-Campaign-Center-Update.html",
+  "sha256": "ed8b8888c8e408e80c1fa04b73320f80ab6db11501fb83fd819ef3ede2c82421",
+  "size_bytes": 2053103,
   "notes": [
-    "ショッピングを既存123本＋新規877本の合計約1000本へ拡張",
-    "最高管理者のカメラ＋音声・画面＋音声・音声のみのP2Pライブ配信",
-    "このHTMLを持つ一般ユーザーが世界中からライブを視聴可能",
-    "配信終了時に最高管理者の端末へ自動録画",
-    "GitHubで公開した録画をAFT動画・過去ライブとして一般ユーザーも再生可能",
-    "最高管理者がライブ文章を入力してGitHub経由で全端末へ配信",
-    "GitHubトークン・未公開録画・個人情報は公開リポジトリへ保存しない"
+    "独立したAFT動画タブを追加",
+    "一般ユーザーがHTML内から50MBまでの動画を端末へ投稿",
+    "vdaoへ公開された動画を全員共通で表示",
+    "動画コメント・P2Pコメント同期・映像上を流れるコメント",
+    "通報・端末内非表示・安全フィルター・連続投稿制限",
+    "Mega Storeセール・ライブ記念・週末・クリエイター応援・管理者カスタム",
+    "キャンペーン開始・一時停止・再開・終了とストア割引反映",
+    "有料ソフト価格を1000〜3000コインへ調整"
   ]
 }
