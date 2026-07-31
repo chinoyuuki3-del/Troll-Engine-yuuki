@@ -2,8 +2,24 @@
   "service": "Troll Engine Release Center",
   "schema_version": 1,
   "updated_at": "2026-07-31",
-  "latest": "4.2",
+  "latest": "4.3",
   "releases": [
+    {
+      "version": "4.3",
+      "channel": "stable",
+      "title": "GitHub Live Content Update",
+      "published_at": "2026-07-31",
+      "download_url": "https://raw.githubusercontent.com/chinoyuuki3-del/Troll-Engine-yuuki/main/Troll-Engine-v4.3-GitHub-Live-Content-Update.html",
+      "page_url": "https://github.com/chinoyuuki3-del/Troll-Engine-yuuki",
+      "download_ready": false,
+      "supported": true,
+      "notes": [
+        "プロジェクト・イベントのライブ更新",
+        "GitHubテーマ配信",
+        "専用メンテナンス設定",
+        "HTML再アップロード不要のコンテンツ更新"
+      ]
+    },
     {
       "version": "4.2",
       "channel": "stable",
@@ -13,12 +29,7 @@
       "page_url": "https://github.com/chinoyuuki3-del/Troll-Engine-yuuki",
       "download_ready": false,
       "supported": true,
-      "notes": [
-        "GitHub運営コントロール画面",
-        "機能の公開・停止と緊急メンテナンス",
-        "追加安全ルールとBAN時間のオンライン更新",
-        "5分ごとの自動同期"
-      ]
+      "notes": ["GitHub運営コントロール","機能スイッチ","オンライン安全ルール"]
     },
     {
       "version": "4.1",
@@ -29,26 +40,7 @@
       "page_url": "https://github.com/chinoyuuki3-del/Troll-Engine-yuuki",
       "download_ready": true,
       "supported": true,
-      "notes": [
-        "GitHubリリースセンターv2",
-        "最新版と過去バージョンの一覧表示",
-        "配信中・準備中ステータス表示"
-      ]
-    },
-    {
-      "version": "4.0",
-      "channel": "stable",
-      "title": "System & Security Update",
-      "published_at": "2026-07-31",
-      "download_url": "https://raw.githubusercontent.com/chinoyuuki3-del/Troll-Engine-yuuki/main/Troll-Engine-v4.0-System-Security-Update.html",
-      "page_url": "https://github.com/chinoyuuki3-del/Troll-Engine-yuuki",
-      "download_ready": false,
-      "supported": true,
-      "notes": [
-        "秘密のオーナーキーによる最高管理者認証",
-        "AFTネットと安全フィルター",
-        "GitHubお知らせ・サービス状況"
-      ]
+      "notes": ["GitHubリリースセンターv2","最新版と過去バージョンの一覧表示"]
     }
   ]
 }
