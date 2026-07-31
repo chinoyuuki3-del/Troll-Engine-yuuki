@@ -1,0 +1,20 @@
+{
+  "app": "Troll Engine",
+  "schema_version": 3,
+  "version": "4.9",
+  "channel": "stable",
+  "title": "GitHub All-in-One Storage Update",
+  "published_at": "2026-07-31",
+  "download_ready": true,
+  "repository": "chinoyuuki3-del/Troll-Engine-yuuki",
+  "download_url": "https://raw.githubusercontent.com/chinoyuuki3-del/Troll-Engine-yuuki/main/releases/Troll-Engine-v4.9-GitHub-All-in-One-Storage-Update.html",
+  "sha256": "5b0e6a2fd7d211ac47eb0534b2ae2e48e067dd58c4cde6aa70d18858fd179918",
+  "size_bytes": 2005819,
+  "notes": [
+    "Troll-Engine-yuukiを中央保存リポジトリに統一",
+    "更新配信・招待設定・メンテナンス・機能制御を1か所から取得",
+    "123456789とa123aへの新HTMLからの参照を終了",
+    "FR-招待コードは10分間・1回だけ有効",
+    "パスワード・メール・オーナーキー・個人チャット・友達一覧はGitHubへ保存しない"
+  ]
+}
