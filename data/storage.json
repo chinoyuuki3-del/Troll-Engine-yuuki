@@ -23,7 +23,10 @@
     "news": "news.json",
     "status": "status.json",
     "safety_rules": "safety-rules.json",
-    "users_search_directory": "users.json"
+    "users_search_directory": "users.json",
+    "store_catalog": "data/store-catalog.json",
+    "live_messages": "data/live-messages.json",
+    "aft_videos": "data/aft-videos.json"
   },
   "never_store_on_public_github": [
     "password",
@@ -33,7 +36,8 @@
     "friend_list",
     "location_history",
     "private_files",
-    "github_token"
+    "github_token",
+    "unpublished_live_recordings"
   ],
   "private_data_location": "device-local-or-direct-peer-connection",
   "updated_at": "2026-07-31"
