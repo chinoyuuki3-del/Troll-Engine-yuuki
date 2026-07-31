@@ -1,0 +1,18 @@
+{
+  "service": "Troll Engine Projects",
+  "schema_version": 1,
+  "updated_at": "2026-07-31T20:30:00+09:00",
+  "projects": [
+    {
+      "id": "troll-engine-live-content",
+      "title": "Troll Engine Live Content",
+      "description": "GitHubからプロジェクト、イベント、テーマ、メンテナンス情報を自動更新する公式プロジェクトです。",
+      "status": "active",
+      "members": 1,
+      "max_members": 100,
+      "join_enabled": true,
+      "join_url": "https://github.com/chinoyuuki3-del/Troll-Engine-yuuki",
+      "tags": ["公式", "GitHub", "自動更新"]
+    }
+  ]
+}
