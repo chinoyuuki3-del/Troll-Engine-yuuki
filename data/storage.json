@@ -1,0 +1,40 @@
+{
+  "service": "Troll Engine Yuuki Central Storage",
+  "schema_version": 1,
+  "enabled": true,
+  "primary_repository": "chinoyuuki3-del/Troll-Engine-yuuki",
+  "raw_base_url": "https://raw.githubusercontent.com/chinoyuuki3-del/Troll-Engine-yuuki/main/",
+  "poll_interval_seconds": 5,
+  "owner_write_only": true,
+  "client_access": "read-only",
+  "public_shared_data": {
+    "update": "data/update.json",
+    "releases": "data/releases.json",
+    "invite": "data/invite.json",
+    "service": "data/service.json",
+    "maintenance": "data/maintenance.json",
+    "feature_control": "data/feature-control.json",
+    "test_channel": "data/test-channel.json",
+    "plans": "data/plans.json",
+    "badges": "data/badges.json",
+    "projects": "projects.json",
+    "events": "events.json",
+    "themes": "themes.json",
+    "news": "news.json",
+    "status": "status.json",
+    "safety_rules": "safety-rules.json",
+    "users_search_directory": "users.json"
+  },
+  "never_store_on_public_github": [
+    "password",
+    "owner_key",
+    "email",
+    "private_chat",
+    "friend_list",
+    "location_history",
+    "private_files",
+    "github_token"
+  ],
+  "private_data_location": "device-local-or-direct-peer-connection",
+  "updated_at": "2026-07-31"
+}
