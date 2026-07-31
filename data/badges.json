@@ -1,0 +1,26 @@
+{
+  "badge_definitions": {
+    "tester": {
+      "name": "テスター",
+      "icon": "🧪"
+    },
+    "early_member": {
+      "name": "初期メンバー",
+      "icon": "🌱"
+    },
+    "bug_finder": {
+      "name": "バグ発見者",
+      "icon": "🐞"
+    },
+    "project_member": {
+      "name": "プロジェクト参加者",
+      "icon": "🧩"
+    },
+    "official_supporter": {
+      "name": "公式サポーター",
+      "icon": "⭐"
+    }
+  },
+  "awards": [],
+  "updated_at": "2026-07-31T00:00:00+09:00"
+}
