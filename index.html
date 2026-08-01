@@ -2,12 +2,12 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8" />
-  <title>Troll Engine - Classic Standard Edition v4.23 - Public World All Peer Sync</title>
+  <title>Troll Engine - Classic Standard Edition v4.24 - Admin Data Menu</title>
   <meta name="friend-radio-build" content="ultimate-fixed-2026-07-party-v1" />
   <meta name="troll-engine-gummy-install" content="video-reference-charge-v3.7-classic-standard-edition" />
   <meta name="troll-engine-edition" content="standard" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="troll-engine-classic-version" content="4.23" />
+  <meta name="troll-engine-classic-version" content="4.24" />
   <meta name="troll-engine-storage-repository" content="chinoyuuki3-del/Troll-Engine-yuuki" />
   <meta name="troll-engine-update-channel" content="classic-no-nova" />
 
@@ -2110,6 +2110,7 @@ body.warningQuietSafe #warningQuickFab {
   @media(max-width:650px){#teOpenWorldV421 .teOwCreatorGrid{grid-template-columns:1fr}#teOpenWorldV421 .teOwCreatorGrid .wide{grid-column:auto}#teOpenWorldV421 .teOwStage{min-height:260px;aspect-ratio:4/5}.teOwSide{grid-template-columns:1fr}#teOpenWorldV421 .teOwSide .teOwPanel:last-child{grid-column:auto}.teOwChatRow{grid-template-columns:1fr auto}.teOwChatRow select{grid-column:1/-1}.teOwTopControls{grid-template-columns:1fr 1fr}.teOwTopControls label{grid-column:1/-1}.teOwEmotes{grid-template-columns:repeat(6,1fr)}}
 </style>
 <!-- ===== Troll Public World v4.21 STYLE END ===== -->
+<link id="teAdminDataV424Css" rel="stylesheet" href="assets/admin-data-v424.css">
 </head>
 <body>
 
@@ -2268,6 +2269,7 @@ body.warningQuietSafe #warningQuickFab {
   <button onclick="showTab('peerRoom', this)">PeerJSルーム</button>
   
     <button id="teOpenWorldV421Tab" onclick="showTab('teOpenWorldV421', this);window.teOpenWorldV422?.open?.()">🌍 公開ワールド</button>
+<button id="teAdminDataV424Tab" onclick="showTab('teAdminDataV424',this);window.teAdminDataV424?.open?.()">🧭 管理データ</button>
 <button onclick="showTab('plus', this)">追加+</button>
   <button onclick="showTab('share', this); prepareShareTab()">共有</button>
 <button id="teShoppingMainTab" type="button" onclick="showTab('teShoppingMain',this);window.teStoreTabs?.open('store')">🛍️ ショッピング</button><button id="teApplicationsMainTab" type="button" onclick="showTab('teApplicationsMain',this);window.teStoreTabs?.open('apps')">📦 アプリ</button><button id="aftCloudMainTab" type="button" onclick="showTab('aftCloudMain',this);window.aftCloudSuiteV2?.render?.()">☁️ AFTcloud</button>
@@ -2422,6 +2424,31 @@ body.warningQuietSafe #warningQuickFab {
     </div>
   </section>
   <!-- ===== Troll Public World v4.21 SECTION END ===== -->
+<!-- ===== Troll Engine v4.24 Admin Data Menu SECTION START ===== -->
+<section id="teAdminDataV424">
+  <div class="admHero">
+    <span class="admBadge">ADMIN DATA CENTER · GitHubの生ファイルを開かない管理画面</span>
+    <h2>🧭 管理データメニュー</h2>
+    <p>GitHubへ移動せず、Troll Engine内で公開ワールド・動画・ユーザー・保存データ・運営設定を表形式で確認できます。</p>
+  </div>
+  <div id="teAdmGate" class="admGate">管理者アカウントを確認しています…</div>
+  <div id="teAdmShell" class="admShell admHidden">
+    <aside id="teAdmMenu" class="admMenu"></aside>
+    <div class="admMain">
+      <div class="admToolbar">
+        <input id="teAdmSearch" placeholder="表示中のデータを検索">
+        <button id="teAdmReload" type="button" class="mainBtn">再読み込み</button>
+        <button id="teAdmJson" type="button" class="grayBtn">JSON表示</button>
+        <button id="teAdmCopy" type="button" class="grayBtn">内容をコピー</button>
+      </div>
+      <div id="teAdmStatus" class="admStatus">データを選択してください。</div>
+      <div id="teAdmStats" class="admStats"></div>
+      <div id="teAdmView"></div>
+      <div id="teAdmDetail" class="admDetail admHidden"></div>
+    </div>
+  </div>
+</section>
+<!-- ===== Troll Engine v4.24 Admin Data Menu SECTION END ===== -->
 <section id="peerRoom">
     <div class="card" id="frPeerGameRoom">
       <h2>PeerJSゲームルーム</h2>
@@ -33350,5 +33377,6 @@ body.te-edition-ultimate header{border-bottom-color:#c4b5fd}body.te-edition-ulti
 </script>
 <!-- ===== Troll Engine v4.15 Rescue & Information Update END ===== -->
 
+<script id="teAdminDataV424External" src="assets/admin-data-v424.js"></script>
 </body>
 </html>
