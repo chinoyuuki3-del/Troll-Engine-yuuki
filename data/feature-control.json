@@ -1,6 +1,6 @@
 {
-  "update_id": "v4-10-live-store",
-  "updated_at": "2026-07-31",
+  "update_id": "github-16-1785559860",
+  "updated_at": "2026-08-01T04:51:00Z",
   "features": {
     "user_search": {
       "enabled": true,
@@ -40,7 +40,7 @@
     },
     "test_channel": {
       "enabled": true,
-      "reason": ""
+      "reason": "エラー"
     }
   }
 }
