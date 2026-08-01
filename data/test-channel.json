@@ -1,8 +1,11 @@
 {
   "enabled": true,
-  "channel": "test",
+  "channel": "beta",
   "testers": [],
-  "release": null,
-  "message": "Troll Engine v5.0 – AFT Cloud Platform Update Beta（5.0.0-beta.1）をAFT Testへ公開しました。",
-  "updated_at": "2026-07-31T06:04:00Z"
+  "release": {
+    "version": "4.29-beta.1",
+    "title": "Beta Lab & Network Core Update"
+  },
+  "message": "Troll Engine v4.29-beta.1 — Beta Lab & Network Core Update をベータチャンネルへ公開しました。",
+  "updated_at": "2026-08-01T14:57:00+09:00"
 }
