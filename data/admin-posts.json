@@ -1,11 +1,29 @@
 {
-  "version": "4.25",
-  "updated_at": "2026-08-01T01:41:00Z",
+  "version": "4.26",
+  "updated_at": "2026-08-01T02:33:40Z",
   "settings": {
     "feed_enabled": true,
     "title": "Troll Engine 運営フィード"
   },
   "posts": [
+    {
+      "id": "post-ms9rbq6h-5jt1in",
+      "kind": "maintenance",
+      "title": "メンテナンスを開始しました",
+      "body": "システム点検を行っています。終了までしばらくお待ちください。",
+      "image_url": "",
+      "action_label": "",
+      "action_url": "",
+      "audience": "all",
+      "pinned": true,
+      "status": "published",
+      "starts_at": "2026-08-01T02:33:27.881Z",
+      "expires_at": "",
+      "author": "chinoyuuki3-del",
+      "created_at": "2026-08-01T02:33:27.881Z",
+      "updated_at": "2026-08-01T02:33:27.881Z",
+      "published_at": "2026-08-01T02:33:27.881Z"
+    },
     {
       "id": "post-v425-owner-studio",
       "kind": "update",
@@ -26,6 +44,13 @@
     }
   ],
   "audit": [
+    {
+      "id": "audit-ms9rbq6i-js4aka",
+      "action": "quick_publish",
+      "detail": "メンテナンスを開始しました",
+      "actor": "chinoyuuki3-del",
+      "at": "2026-08-01T02:33:27.882Z"
+    },
     {
       "id": "audit-v425-created",
       "action": "studio_create",
