@@ -55,6 +55,8 @@ jobs:
             python3 scripts/aft-video-publish.py
           elif printf '%s\n' "$ISSUE_BODY" | grep -Eq '^ACTION: public_world_(publish|delete)'; then
             python3 scripts/public-world-publish.py
+          elif printf '%s\n' "$ISSUE_BODY" | grep -Eq '^ACTION: admin_post_(upsert|delete)'; then
+            python3 scripts/admin-post-action.py
           elif printf '%s\n' "$ISSUE_BODY" | grep -q '^ACTION: admin_posts_replace'; then
             python3 scripts/admin-posts-publish.py
           elif printf '%s\n' "$ISSUE_BODY" | grep -q '^ACTION: publish_owner_studio'; then
@@ -98,5 +100,5 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           ISSUE_URL: ${{ github.event.issue.html_url }}
         run: |
-          gh issue comment "$ISSUE_URL" --body "管理操作を反映しました。端末側は約15秒ごとに確認します。"
+          gh issue comment "$ISSUE_URL" --body "管理操作を反映しました。端末側は約5秒ごとに確認します。"
           gh issue close "$ISSUE_URL" --reason completed
