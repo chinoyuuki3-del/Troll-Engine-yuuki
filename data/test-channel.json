@@ -1,11 +1,13 @@
 {
   "enabled": true,
   "channel": "beta",
+  "mode": "opt-in",
   "testers": [],
+  "stable_version": "4.28.4",
   "release": {
     "version": "4.29-beta.1",
     "title": "Beta Lab & Network Core Update"
   },
-  "message": "Troll Engine v4.29-beta.1 — Beta Lab & Network Core Update をベータチャンネルへ公開しました。",
-  "updated_at": "2026-08-01T14:57:00+09:00"
+  "message": "安定版 v4.28.4 はそのまま利用できます。希望する端末だけ「v4.29ベータに参加する」をオンにすると、4.29-beta.1 の実験機能を試せます。",
+  "updated_at": "2026-08-01T15:05:00+09:00"
 }
