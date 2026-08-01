@@ -1,0 +1,43 @@
+name: Publish Troll Engine v4.25 Owner Studio
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".publish-v425/admin-studio.gz.b64"
+      - "scripts/apply-admin-studio-v425.py"
+      - ".github/workflows/publish-pages-v425.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: troll-engine-pages-v425
+  cancel-in-progress: false
+
+jobs:
+  publish-owner-studio:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Apply owner studio
+        run: python3 scripts/apply-admin-studio-v425.py
+      - name: Validate page
+        run: |
+          test -s index.html
+          grep -q "teAdminStudioV425" index.html
+          grep -q "Troll Engine v4.25 Owner Studio" index.html
+          grep -q "admin-posts.json" index.html
+      - name: Commit publication
+        run: |
+          git config user.name "Troll Engine yuuki Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add index.html
+          if git diff --cached --quiet; then
+            echo "v4.25は公開済みです。"
+            exit 0
+          fi
+          git commit -m "Publish Troll Engine v4.25 Owner Studio"
+          git pull --rebase origin main
+          git push origin main
