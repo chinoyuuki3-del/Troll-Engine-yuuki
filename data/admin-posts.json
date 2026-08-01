@@ -1,0 +1,37 @@
+{
+  "version": "4.25",
+  "updated_at": "2026-08-01T01:41:00Z",
+  "settings": {
+    "feed_enabled": true,
+    "title": "Troll Engine 運営フィード"
+  },
+  "posts": [
+    {
+      "id": "post-v425-owner-studio",
+      "kind": "update",
+      "title": "管理スタジオを開通しました",
+      "body": "最高管理者はTroll Engine内から、公式投稿の作成・下書き・予約公開・固定・編集・削除、緊急告知、メンテナンス操作を実行できます。",
+      "image_url": "",
+      "action_label": "",
+      "action_url": "",
+      "audience": "all",
+      "pinned": true,
+      "status": "published",
+      "starts_at": "",
+      "expires_at": "",
+      "author": "chinoyuuki3-del",
+      "created_at": "2026-08-01T01:41:00Z",
+      "updated_at": "2026-08-01T01:41:00Z",
+      "published_at": "2026-08-01T01:41:00Z"
+    }
+  ],
+  "audit": [
+    {
+      "id": "audit-v425-created",
+      "action": "studio_create",
+      "detail": "Troll Engine v4.25 管理スタジオを作成",
+      "actor": "chinoyuuki3-del",
+      "at": "2026-08-01T01:41:00Z"
+    }
+  ]
+}
