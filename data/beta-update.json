@@ -1,27 +1,29 @@
 {
-  "service": "Troll Engine Beta Channel",
-  "schema_version": 1,
+  "service": "Troll Engine Beta Program",
+  "schema_version": 2,
   "updated_at": "2026-08-01",
   "repository": "chinoyuuki3-del/Troll-Engine-yuuki",
+  "stable_version": "4.28.4",
   "channel": "beta",
+  "enrollment": "opt-in",
   "latest": "4.29-beta.1",
-  "status": "testing",
+  "status": "accepting-testers",
   "title": "Beta Lab & Network Core Update",
   "download_ready": false,
-  "html_filename": "Troll-Engine-v4.29-beta.1-Beta-Lab-Network-Core.html",
+  "html_filename": "Troll-Engine-v4.28.4-Stable-with-v4.29-Beta-Opt-In.html",
   "features": [
-    "安定版・ベータ版チャンネル切り替え",
+    "安定版v4.28.4から任意参加",
     "8項目のネットワーク診断センター",
     "GitHub Raw・CDN・Pagesの自動再接続",
-    "5秒ごとのGitHub運営データ同期",
+    "参加中だけ5秒GitHub運営データ同期",
     "GitHub Issueを使ったキー不要フィードバック",
-    "導入前バックアップと安全なロールバック",
+    "参加前バックアップと安全なロールバック",
     "管理者用の実験機能スイッチ",
     "端末内Beta Log"
   ],
   "known_limitations": [
     "GitHub Pagesが無効な場合、その診断項目は失敗として表示されます",
     "スクリーンショットはGitHubページを開いた後に手動で添付します",
-    "安定モードは実験機能を停止しますが、HTMLファイル自体を旧版へ置き換えません"
+    "ベータ参加状態は端末ごとに保存されます"
   ]
 }
