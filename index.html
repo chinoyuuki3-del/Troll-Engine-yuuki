@@ -2,12 +2,12 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8" />
-  <title>Troll Engine - Classic Standard Edition v4.17 - Web Edition</title>
+  <title>Troll Engine - Classic Standard Edition v4.23 - Public World All Peer Sync</title>
   <meta name="friend-radio-build" content="ultimate-fixed-2026-07-party-v1" />
   <meta name="troll-engine-gummy-install" content="video-reference-charge-v3.7-classic-standard-edition" />
   <meta name="troll-engine-edition" content="standard" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="troll-engine-classic-version" content="4.17" />
+  <meta name="troll-engine-classic-version" content="4.23" />
   <meta name="troll-engine-storage-repository" content="chinoyuuki3-del/Troll-Engine-yuuki" />
   <meta name="troll-engine-update-channel" content="classic-no-nova" />
 
@@ -2045,6 +2045,71 @@ body.warningQuietSafe #warningQuickFab {
     .aft2TopGrid,.aft2Stats,.aft2Form.two,.aft2StatusGrid { grid-template-columns:1fr !important; }
   }
 </style>
+<!-- ===== Troll Public World v4.21 STYLE START ===== -->
+<style id="teOpenWorldV421Style">
+  #teOpenWorldV421 .teOwHero{background:linear-gradient(135deg,rgba(2,132,199,.24),rgba(124,58,237,.22),rgba(15,23,42,.96));border-color:rgba(125,211,252,.42)}
+  #teOpenWorldV421 .teOwHeroTop{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;flex-wrap:wrap}
+  #teOpenWorldV421 .teOwHero h2{margin:.1em 0 .35em;font-size:clamp(1.55rem,4vw,2.35rem)}
+  #teOpenWorldV421 .teOwBadge{display:inline-flex;align-items:center;gap:6px;padding:7px 11px;border-radius:999px;background:rgba(16,185,129,.16);border:1px solid rgba(110,231,183,.35);color:#a7f3d0;font-weight:900;font-size:12px}
+  #teOpenWorldV421 .teOwCatalog{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+  #teOpenWorldV421 .teOwWorldCard{position:relative;overflow:hidden;min-height:195px;padding:17px;border:1px solid rgba(148,163,184,.28);border-radius:20px;background:linear-gradient(150deg,rgba(30,41,59,.95),rgba(2,6,23,.98));box-shadow:0 14px 28px rgba(0,0,0,.18)}
+  #teOpenWorldV421 .teOwWorldCard::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 88% 6%,var(--ow-glow,rgba(56,189,248,.25)),transparent 42%);pointer-events:none}
+  #teOpenWorldV421 .teOwWorldCard>*{position:relative}
+  #teOpenWorldV421 .teOwWorldIcon{font-size:42px;line-height:1;margin-bottom:10px}
+  #teOpenWorldV421 .teOwWorldCard h3{margin:0 0 5px;font-size:20px}
+  #teOpenWorldV421 .teOwWorldCard p{min-height:52px;color:#cbd5e1;line-height:1.55}
+  #teOpenWorldV421 .teOwWorldMeta{display:flex;gap:7px;flex-wrap:wrap;margin:10px 0}
+  #teOpenWorldV421 .teOwWorldMeta span{padding:5px 8px;border-radius:999px;background:rgba(15,23,42,.72);border:1px solid rgba(148,163,184,.25);font-size:11px;color:#bae6fd;font-weight:800}
+  #teOpenWorldV421 .teOwJoinGrid{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(270px,.75fr);gap:12px;align-items:start}
+  #teOpenWorldV421 .teOwStageWrap{position:relative;padding:10px;border-radius:22px;background:#020617;border:1px solid rgba(125,211,252,.28);overflow:hidden}
+  #teOpenWorldV421 .teOwStage{position:relative;width:100%;aspect-ratio:16/9;min-height:330px;max-height:610px;overflow:hidden;border-radius:16px;outline:none;touch-action:none;user-select:none;background-color:#0f172a;background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px),radial-gradient(circle at 50% 50%,rgba(56,189,248,.18),transparent 45%);background-size:42px 42px,42px 42px,100% 100%}
+  #teOpenWorldV421 .teOwStage[data-theme="plaza"]{background-color:#123047;background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px),radial-gradient(circle at 50% 52%,rgba(250,204,21,.24),transparent 34%),linear-gradient(135deg,#0f766e,#164e63 48%,#1e3a8a)}
+  #teOpenWorldV421 .teOwStage[data-theme="game"]{background-color:#231942;background-image:linear-gradient(rgba(255,255,255,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.055) 1px,transparent 1px),radial-gradient(circle at 50% 50%,rgba(236,72,153,.26),transparent 42%),linear-gradient(140deg,#312e81,#581c87 55%,#111827)}
+  #teOpenWorldV421 .teOwStage[data-theme="theater"]{background-color:#09090b;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px),radial-gradient(ellipse at 50% 14%,rgba(239,68,68,.26),transparent 40%),linear-gradient(180deg,#18181b,#020617)}
+  #teOpenWorldV421 .teOwStage[data-theme="creative"]{background-color:#3b1d2b;background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px),radial-gradient(circle at 20% 20%,rgba(251,191,36,.24),transparent 30%),radial-gradient(circle at 80% 75%,rgba(34,211,238,.22),transparent 34%),linear-gradient(135deg,#7c2d12,#4c1d95)}
+  #teOpenWorldV421 .teOwZone{position:absolute;transform:translate(-50%,-50%);padding:8px 11px;border-radius:12px;background:rgba(2,6,23,.64);border:1px solid rgba(255,255,255,.2);backdrop-filter:blur(5px);font-size:12px;color:#e0f2fe;font-weight:900;pointer-events:none;box-shadow:0 8px 20px rgba(0,0,0,.18)}
+  #teOpenWorldV421 .teOwAvatar{position:absolute;transform:translate(-50%,-50%);display:grid;place-items:center;width:42px;height:42px;border-radius:50%;border:3px solid rgba(255,255,255,.82);box-shadow:0 8px 18px rgba(0,0,0,.35);font-weight:1000;color:#fff;transition:left .09s linear,top .09s linear;z-index:4}
+  #teOpenWorldV421 .teOwAvatar.isMe{outline:4px solid rgba(56,189,248,.34)}
+  #teOpenWorldV421 .teOwAvatarName{position:absolute;left:50%;top:47px;transform:translateX(-50%);max-width:130px;padding:3px 7px;border-radius:8px;background:rgba(2,6,23,.78);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:11px;color:#fff;font-weight:900;pointer-events:none}
+  #teOpenWorldV421 .teOwBubble{position:absolute;left:50%;bottom:50px;transform:translateX(-50%);max-width:190px;padding:7px 9px;border-radius:11px 11px 11px 3px;background:#fff;color:#0f172a;font-size:11px;line-height:1.35;box-shadow:0 8px 18px rgba(0,0,0,.3);pointer-events:none}
+  #teOpenWorldV421 .teOwEmote{position:absolute;left:50%;bottom:49px;transform:translateX(-50%);font-size:27px;filter:drop-shadow(0 5px 6px rgba(0,0,0,.4));animation:teOwPop .25s ease-out}
+  @keyframes teOwPop{from{transform:translateX(-50%) scale(.4);opacity:0}to{transform:translateX(-50%) scale(1);opacity:1}}
+  #teOpenWorldV421 .teOwHud{position:absolute;left:18px;top:18px;right:18px;display:flex;justify-content:space-between;gap:8px;pointer-events:none;z-index:8}
+  #teOpenWorldV421 .teOwHud span{padding:6px 9px;border-radius:999px;background:rgba(2,6,23,.72);border:1px solid rgba(255,255,255,.18);font-size:11px;font-weight:900;color:#dbeafe;backdrop-filter:blur(7px)}
+  #teOpenWorldV421 .teOwMoveHelp{position:absolute;right:18px;bottom:17px;padding:6px 9px;border-radius:10px;background:rgba(2,6,23,.7);font-size:11px;color:#cbd5e1;pointer-events:none;z-index:8}
+  #teOpenWorldV421 .teOwSide{display:grid;gap:12px}
+  #teOpenWorldV421 .teOwPanel{padding:13px;border:1px solid rgba(148,163,184,.25);border-radius:17px;background:rgba(2,6,23,.62)}
+  #teOpenWorldV421 .teOwPanel h3{margin:0 0 9px}
+  #teOpenWorldV421 .teOwRoster{display:grid;gap:7px;max-height:255px;overflow:auto}
+  #teOpenWorldV421 .teOwPerson{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:8px;padding:8px;border-radius:12px;background:rgba(15,23,42,.88);border:1px solid rgba(148,163,184,.16)}
+  #teOpenWorldV421 .teOwDot{width:12px;height:12px;border-radius:50%;box-shadow:0 0 0 3px rgba(255,255,255,.08)}
+  #teOpenWorldV421 .teOwPersonText{min-width:0}.teOwPersonText b,.teOwPersonText small{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.teOwPersonText small{color:#94a3b8}
+  #teOpenWorldV421 .teOwPersonActions{display:flex;gap:4px}.teOwPersonActions button{margin:0;padding:6px 7px;font-size:11px}
+  #teOpenWorldV421 .teOwChatLog{height:245px;overflow:auto;padding:10px;border-radius:13px;background:#020617;border:1px solid rgba(148,163,184,.2)}
+  #teOpenWorldV421 .teOwMsg{margin:0 0 8px;padding:8px 9px;border-radius:11px;background:rgba(30,41,59,.84);line-height:1.45;overflow-wrap:anywhere}
+  #teOpenWorldV421 .teOwMsg b{color:#7dd3fc}.teOwMsg small{color:#64748b;margin-left:7px}.teOwMsg.system{color:#93c5fd;background:rgba(30,64,175,.15)}
+  #teOpenWorldV421 .teOwChatRow{display:grid;grid-template-columns:110px minmax(0,1fr) auto;gap:7px;margin-top:8px}
+  #teOpenWorldV421 .teOwChatRow input,#teOpenWorldV421 .teOwChatRow select{margin:0;min-width:0}
+  #teOpenWorldV421 .teOwEmotes{display:grid;grid-template-columns:repeat(6,1fr);gap:6px;margin-top:8px}
+  #teOpenWorldV421 .teOwEmotes button{margin:0;padding:8px 4px;font-size:19px}
+  #teOpenWorldV421 .teOwTopControls{display:grid;grid-template-columns:minmax(180px,1fr) auto auto;gap:8px;align-items:end;margin-top:12px}
+  #teOpenWorldV421 .teOwTopControls label{display:grid;gap:5px;font-weight:900;color:#bae6fd}.teOwTopControls input{margin:0}
+  #teOpenWorldV421 .teOwStatus{padding:11px 13px;border-radius:14px;background:rgba(2,6,23,.72);border:1px solid rgba(125,211,252,.22);color:#a7f3d0;line-height:1.5}
+  #teOpenWorldV421 .teOwSafety{font-size:12px;color:#cbd5e1;line-height:1.65}
+  #teOpenWorldV421 .teOwHidden{display:none!important}
+  #teOpenWorldV421 .teOwCreatorCard{border-color:rgba(250,204,21,.34);background:radial-gradient(circle at 92% 5%,rgba(250,204,21,.12),transparent 34%),rgba(2,6,23,.78)}
+  #teOpenWorldV421 .teOwCreatorHead{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+  #teOpenWorldV421 .teOwCreatorGrid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+  #teOpenWorldV421 .teOwCreatorGrid label{display:grid;gap:5px;color:#fde68a;font-weight:900}
+  #teOpenWorldV421 .teOwCreatorGrid .wide{grid-column:1/-1}
+  #teOpenWorldV421 .teOwCreatorGrid input,#teOpenWorldV421 .teOwCreatorGrid select,#teOpenWorldV421 .teOwCreatorGrid textarea{width:100%;box-sizing:border-box;margin:0}
+  #teOpenWorldV421 .teOwCreatorGrid textarea{min-height:92px;resize:vertical}
+  #teOpenWorldV421 .teOwCreatorActions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+  #teOpenWorldV421 .teOwCreatorStatus{margin-top:10px;padding:10px 12px;border-radius:12px;background:rgba(15,23,42,.8);border:1px solid rgba(250,204,21,.24);color:#fde68a;white-space:pre-wrap}
+  @media(max-width:930px){#teOpenWorldV421 .teOwJoinGrid{grid-template-columns:1fr}#teOpenWorldV421 .teOwStage{min-height:290px}.teOwSide{grid-template-columns:1fr 1fr}.teOwSide .teOwPanel:last-child{grid-column:1/-1}}
+  @media(max-width:650px){#teOpenWorldV421 .teOwCreatorGrid{grid-template-columns:1fr}#teOpenWorldV421 .teOwCreatorGrid .wide{grid-column:auto}#teOpenWorldV421 .teOwStage{min-height:260px;aspect-ratio:4/5}.teOwSide{grid-template-columns:1fr}#teOpenWorldV421 .teOwSide .teOwPanel:last-child{grid-column:auto}.teOwChatRow{grid-template-columns:1fr auto}.teOwChatRow select{grid-column:1/-1}.teOwTopControls{grid-template-columns:1fr 1fr}.teOwTopControls label{grid-column:1/-1}.teOwEmotes{grid-template-columns:repeat(6,1fr)}}
+</style>
+<!-- ===== Troll Public World v4.21 STYLE END ===== -->
 </head>
 <body>
 
@@ -2202,7 +2267,8 @@ body.warningQuietSafe #warningQuickFab {
   <button onclick="showTab('onlineLobby', this)">オンライン</button>
   <button onclick="showTab('peerRoom', this)">PeerJSルーム</button>
   
-  <button onclick="showTab('plus', this)">追加+</button>
+    <button id="teOpenWorldV421Tab" onclick="showTab('teOpenWorldV421', this);window.teOpenWorldV422?.open?.()">🌍 公開ワールド</button>
+<button onclick="showTab('plus', this)">追加+</button>
   <button onclick="showTab('share', this); prepareShareTab()">共有</button>
 <button id="teShoppingMainTab" type="button" onclick="showTab('teShoppingMain',this);window.teStoreTabs?.open('store')">🛍️ ショッピング</button><button id="teApplicationsMainTab" type="button" onclick="showTab('teApplicationsMain',this);window.teStoreTabs?.open('apps')">📦 アプリ</button><button id="aftCloudMainTab" type="button" onclick="showTab('aftCloudMain',this);window.aftCloudSuiteV2?.render?.()">☁️ AFTcloud</button>
   <button type="button" onclick="showTab('aftServiceMain',this);window.aftServiceSuiteV47?.open('id')">🪪 AFT ID</button>
@@ -2237,7 +2303,126 @@ body.warningQuietSafe #warningQuickFab {
     </div>
   </section>
 
-  <section id="peerRoom">
+  <!-- ===== Troll Public World v4.21 SECTION START ===== -->
+  <section id="teOpenWorldV421">
+    <div class="card teOwHero">
+      <div class="teOwHeroTop">
+        <div>
+          <span class="teOwBadge">🌐 GitHub入口 ＋ P2P交流</span>
+          <h2>Troll Public World</h2>
+          <p class="note">友達登録なしで公開ワールドへ参加できます。GitHubから一覧を読み込み、会話・移動・エモートはホスト中継＋定期全体同期で参加者全員へ反映します。</p>
+        </div>
+        <div class="teOwBadge">登録不要・ワンクリック参加</div>
+      </div>
+      <div class="teOwTopControls">
+        <label>ワールドで使う表示名
+          <input id="teOwName" maxlength="24" placeholder="好きな表示名">
+        </label>
+        <button class="subBtn" type="button" onclick="window.teOpenWorldV422.saveName()">名前を保存</button>
+        <button class="grayBtn" type="button" onclick="window.teOpenWorldV422.refreshCatalog()">一覧更新</button>
+      </div>
+      <div id="teOwStatus" class="teOwStatus">公開ワールド一覧を準備しています…</div>
+    </div>
+
+    <div class="card">
+      <h2>公開ワールド</h2>
+      <div id="teOwCatalog" class="teOwCatalog"></div>
+    </div>
+
+    <div id="teOwAdminCreator" class="card teOwCreatorCard teOwHidden">
+      <div class="teOwCreatorHead">
+        <div>
+          <span class="teOwBadge">🛠️ 管理者専用</span>
+          <h2>公開ワールドを作る</h2>
+          <p class="note">作ったワールドはまずこの端末へ保存されます。最高管理者はGitHubページを開かず、Troll Engine内から永久公開できます。</p>
+        </div>
+        <button class="grayBtn" type="button" onclick="window.teOpenWorldV422.resetCreator()">入力をリセット</button>
+      </div>
+      <div class="teOwCreatorGrid">
+        <label>ワールド名
+          <input id="teOwCreateName" maxlength="40" placeholder="例：みんなの夏祭り広場">
+        </label>
+        <label>ワールドID（英数字・省略可）
+          <input id="teOwCreateId" maxlength="80" placeholder="例：summer-festival">
+        </label>
+        <label>アイコン
+          <input id="teOwCreateIcon" maxlength="8" value="🌍" placeholder="🌍">
+        </label>
+        <label>見た目
+          <select id="teOwCreateTheme"><option value="plaza">🌆 広場</option><option value="game">🕹️ ネオンゲーム</option><option value="theater">🎬 シアター</option><option value="creative">🎨 クリエイティブ</option></select>
+        </label>
+        <label class="wide">説明
+          <textarea id="teOwCreateDescription" maxlength="180" placeholder="このワールドで何ができるか書いてください。"></textarea>
+        </label>
+        <label class="wide">タグ（カンマ区切り・最大5個）
+          <input id="teOwCreateTags" maxlength="100" placeholder="雑談, イベント, 初心者歓迎">
+        </label>
+        <label class="wide">エリア名（1行に1つ・最大8個）
+          <textarea id="teOwCreateZones" maxlength="240" placeholder="⛲ 中央広場&#10;☕ カフェ&#10;🎮 ゲームコーナー"></textarea>
+        </label>
+      </div>
+      <div class="teOwCreatorActions">
+        <button class="mainBtn" type="button" onclick="window.teOpenWorldV422.createWorld(false)">この端末に作成</button>
+        <button class="purpleBtn" type="button" onclick="window.teOpenWorldV422.createWorld(true)">Troll Engine内でGitHub公開</button>
+      </div>
+      <div id="teOwCreatorStatus" class="teOwCreatorStatus">管理者認証後にワールドを作成できます。</div>
+    </div>
+
+    <div id="teOwJoined" class="card teOwHidden">
+      <div class="teOwHeroTop">
+        <div>
+          <span class="teOwBadge">参加中</span>
+          <h2 id="teOwCurrentTitle">公開ワールド</h2>
+          <p id="teOwCurrentDescription" class="note"></p>
+        </div>
+        <button class="dangerBtn" type="button" onclick="window.teOpenWorldV422.leave()">ワールドから退出</button>
+      </div>
+      <div class="teOwJoinGrid">
+        <div class="teOwStageWrap">
+          <div id="teOwStage" class="teOwStage" tabindex="0" aria-label="公開ワールド。矢印キーまたはWASDで移動できます。">
+            <div class="teOwHud"><span id="teOwWorldNet">P2P準備中</span><span id="teOwWorldCount">0人</span></div>
+            <div id="teOwZones"></div>
+            <div id="teOwAvatars"></div>
+            <div class="teOwMoveHelp">タップ／クリック・WASD・矢印キーで移動</div>
+          </div>
+        </div>
+        <div class="teOwSide">
+          <div class="teOwPanel">
+            <h3>参加者</h3>
+            <div id="teOwRoster" class="teOwRoster">参加者を読み込み中…</div>
+          </div>
+          <div class="teOwPanel">
+            <h3>エモート</h3>
+            <div class="teOwEmotes">
+              <button type="button" onclick="window.teOpenWorldV422.emote('👋')">👋</button>
+              <button type="button" onclick="window.teOpenWorldV422.emote('😄')">😄</button>
+              <button type="button" onclick="window.teOpenWorldV422.emote('🎉')">🎉</button>
+              <button type="button" onclick="window.teOpenWorldV422.emote('👍')">👍</button>
+              <button type="button" onclick="window.teOpenWorldV422.emote('❓')">❓</button>
+              <button type="button" onclick="window.teOpenWorldV422.emote('✨')">✨</button>
+            </div>
+            <p class="teOwSafety">エモートと移動は、そのワールドにいる人へリアルタイムで共有されます。</p>
+          </div>
+          <div class="teOwPanel">
+            <h3>安全メニュー</h3>
+            <p class="teOwSafety">参加者一覧から相手をミュート・ブロック・端末内に通報記録できます。個人情報や連絡先は公開チャットへ書かないでください。</p>
+            <button class="grayBtn" type="button" onclick="window.teOpenWorldV422.clearBlocks()">ブロック設定を確認</button>
+          </div>
+        </div>
+      </div>
+      <div class="teOwPanel" style="margin-top:12px">
+        <h3>ワールドチャット</h3>
+        <div id="teOwChatLog" class="teOwChatLog" aria-live="polite"></div>
+        <div class="teOwChatRow">
+          <select id="teOwChatScope" aria-label="チャット範囲"><option value="all">ワールド全体</option><option value="nearby">近くの人だけ</option></select>
+          <input id="teOwChatInput" maxlength="160" placeholder="メッセージ（160文字まで）" autocomplete="off">
+          <button class="mainBtn" type="button" onclick="window.teOpenWorldV422.sendChat()">送信</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ===== Troll Public World v4.21 SECTION END ===== -->
+<section id="peerRoom">
     <div class="card" id="frPeerGameRoom">
       <h2>PeerJSゲームルーム</h2>
       <p class="note">1人が好きなルーム名を決め、ほかの人がまったく同じルーム名を入力して参加します。日本語も使えます。参加者一覧からTroll Engineの友達申請も送れます。</p>
@@ -22221,6 +22406,763 @@ body.fr-final-quiet-buzzer #stableFixPanel {
   async function restoreTheme(){const row=await dbGet(META_STORE,"activeTheme");if(row?.value)applyTheme({colors:row.value},false)}
   function entryFor(pack,key){if(key&&pack.entries?.[key]?.type==="html")return String(pack.entries[key].html||"");return pack.entryHtml}
   function buildBridge(pack,entryKey){const allow=pack.permissions.includes("network");const csp=allow?"default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; img-src data: blob: https:; media-src data: blob: https:; connect-src https: wss:; font-src data:;":"default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; img-src data: blob:; media-src data: blob:; connect-src 'none'; font-src data:;";const bridge=`<meta http-equiv="Content-Security-Policy" content="${csp}"><script>(function(){const p=new Map();let s=0;function ask(type,payload={}){return new Promise((resolve,reject)=>{const requestId='r'+Date.now()+'_'+(++s);p.set(requestId,{resolve,reject});parent.postMessage({teExtension:true,packId:${JSON.stringify(pack.id)},type,requestId,...payload},'*');setTimeout(()=>{if(p.has(requestId)){p.delete(requestId);reject(new Error('timeout'))}},8000)})}window.TrollExtension={packId:${JSON.stringify(pack.id)},toast:m=>parent.postMessage({teExtension:true,packId:${JSON.stringify(pack.id)},type:'toast',message:String(m)},'*'),close:()=>parent.postMessage({teExtension:true,packId:${JSON.stringify(pack.id)},type:'close'},'*'),storage:{get:k=>ask('storage-get',{key:String(k)}),set:(k,v)=>ask('storage-set',{key:String(k),value:v}),remove:k=>ask('storage-remove',{key:String(k)})},ui:{setTheme:id=>ask('ui-set-theme',{themeId:String(id||'')}),resetHome:()=>ask('ui-reset-theme'),toggleHomeWidget:id=>ask('ui-toggle-widget',{widgetId:String(id||'')})},system:{getPublicStatus:()=>ask('system-status')},store:{getProducts:q=>ask('store-products',{query:q||{}}),purchase:id=>ask('store-purchase',{productId:String(id)})},achievements:{getOwnedBadges:()=>ask('badges-owned'),equipBadge:id=>ask('badge-equip',{badgeId:String(id)}),openTradePicker:()=>ask('trade-open'),openTradeHistory:()=>ask('trade-history')}};addEventListener('message',e=>{const d=e.data||{};if(!d.teExtensionReply||d.packId!==${JSON.stringify(pack.id)})return;const x=p.get(d.requestId);if(!x)return;p.delete(d.requestId);d.ok?x.resolve(d.value):x.reject(new Error(d.error||'error'))})})();<\/script>`;let html=entryFor(pack,entryKey);if(/<head[^>]*>/i.test(html))return html.replace(/<head([^>]*)>/i,`<head$1>${bridge}`);if(/<html[^>]*>/i.test(html))return html.replace(/<html([^>]*)>/i,`<html$1><head>${bridge}</head>`);return`<!doctype html><html lang="ja"><head><meta charset="utf-8">${bridge}</head><body>${html}<!-- TROLL_ENGINE_MASSIVE_STORE_V3_3: 271 built-in apps -->
+<!-- ===== Troll Public World v4.21 SCRIPT START ===== -->
+<script id="teOpenWorldV421Script">
+(() => {
+  "use strict";
+  if (window.teOpenWorldV422 && typeof window.teOpenWorldV422.join === 'function') return;
+
+  const VERSION = "4.23";
+  const CATALOG_URL = "https://raw.githubusercontent.com/chinoyuuki3-del/Troll-Engine-yuuki/main/data/public-worlds.json";
+  const MAX_PEOPLE = 24;
+  const SERVER_OPTIONS = {
+    host: "0.peerjs.com",
+    port: 443,
+    path: "/",
+    secure: true,
+    debug: 0,
+    config: { iceServers: [
+      { urls: "stun:stun.l.google.com:19302" },
+      { urls: "stun:stun1.l.google.com:19302" }
+    ] }
+  };
+  const BUILTIN_WORLDS = [
+    { id:"plaza", name:"Troll Plaza", icon:"🌆", theme:"plaza", description:"初めての人も入りやすい中央広場。雑談、待ち合わせ、エモート交流向け。", tags:["雑談","交流","初心者歓迎"], zones:[
+      {label:"⛲ 中央広場",x:50,y:50},{label:"☕ カフェ",x:20,y:24},{label:"📢 イベント掲示板",x:80,y:24},{label:"🌳 休憩エリア",x:18,y:78},{label:"🚪 ワールドゲート",x:82,y:78}
+    ]},
+    { id:"game-square", name:"Game Square", icon:"🕹️", theme:"game", description:"ゲームの話や対戦相手探しに使えるネオン広場。", tags:["ゲーム","対戦募集","ネオン"], zones:[
+      {label:"🏆 ランキング",x:50,y:20},{label:"🎮 対戦ロビー",x:23,y:50},{label:"🧩 協力ゲーム",x:77,y:50},{label:"⚡ クイックマッチ",x:50,y:80}
+    ]},
+    { id:"theater", name:"AFT Theater", icon:"🎬", theme:"theater", description:"動画の感想や上映イベント用のシアターワールド。", tags:["動画","上映","感想"], zones:[
+      {label:"🎞️ メインスクリーン",x:50,y:17},{label:"🍿 ロビー",x:22,y:76},{label:"💬 感想エリア",x:78,y:76},{label:"🎟️ 上映案内",x:50,y:52}
+    ]},
+    { id:"creative-lab", name:"Creative Lab", icon:"🎨", theme:"creative", description:"作品、アイデア、プロジェクトを見せ合う交流スペース。", tags:["作品展示","アイデア","共同制作"], zones:[
+      {label:"🖼️ ギャラリー",x:20,y:24},{label:"💡 アイデアボード",x:80,y:24},{label:"🧪 Project Lab",x:50,y:52},{label:"🤝 メンバー募集",x:25,y:80},{label:"📦 作品置き場",x:75,y:80}
+    ]}
+  ];
+
+  const NAME_KEY = "te_public_world_name_v421";
+  const VISITOR_KEY = "te_public_world_visitor_v421";
+  const BLOCK_KEY = "te_public_world_blocks_v421";
+  const MUTE_KEY = "te_public_world_mutes_v421";
+  const REPORT_KEY = "te_public_world_reports_v421";
+  const NAME_SESSION_KEY = "te_public_world_name_session_v422";
+  const CUSTOM_WORLDS_KEY = "te_public_world_custom_worlds_v422";
+  const GITHUB_AUTH_KEY = "troll-engine-github-auth-v4.20";
+  const GITHUB_OWNER = "chinoyuuki3-del";
+  const GITHUB_REPO = "Troll-Engine-yuuki";
+  const GITHUB_BRANCH = "main";
+  const GITHUB_CATALOG_PATH = "data/public-worlds.json";
+  const $ = id => document.getElementById(id);
+  const clean = (value, max = 160) => String(value ?? "").replace(/[\u0000-\u001f\u007f]/g, " ").replace(/\s+/g, " ").trim().slice(0, max);
+  const safeId = value => clean(value, 80).toLowerCase().replace(/[^a-z0-9._-]/g, "-").replace(/-+/g, "-").replace(/^-|-$/g, "");
+  const nowTime = value => new Date(Number(value) || Date.now()).toLocaleTimeString("ja-JP", {hour:"2-digit",minute:"2-digit"});
+  const randomId = (prefix = "") => prefix + Math.random().toString(36).slice(2,10) + Date.now().toString(36).slice(-5);
+  const readSet = key => { try { const raw = JSON.parse(localStorage.getItem(key) || "[]"); return new Set(Array.isArray(raw) ? raw.map(String) : []); } catch { return new Set(); } };
+  const saveSet = (key, set) => { try { localStorage.setItem(key, JSON.stringify([...set].slice(-300))); } catch {} };
+  const hash = value => {
+    let n = 2166136261;
+    for (const ch of String(value)) n = Math.imul(n ^ ch.charCodeAt(0), 16777619);
+    return (n >>> 0).toString(36);
+  };
+  // 文字列テンプレートを使わず生成し、一部環境での hsl 構文誤認を防止する。
+  const colorFor = function(value) {
+    const hue = parseInt(hash(value).slice(0, 6), 36) % 360;
+    return "hsl(" + hue + ", 72%, 48%)";
+  };
+  const hostPeerId = function(worldId) {
+    return "troll-public-world-v421-" + hash(worldId);
+  };
+  const distance = (a,b) => Math.hypot((Number(a?.x)||0)-(Number(b?.x)||0),(Number(a?.y)||0)-(Number(b?.y)||0));
+
+  let catalog = [...BUILTIN_WORLDS];
+  let remoteCatalog = [...BUILTIN_WORLDS];
+  let customWorlds = [];
+  let nameSaveTimer = null;
+  let currentWorld = null;
+  let peer = null;
+  let hostConn = null;
+  let isHost = false;
+  let leaving = false;
+  let joinGeneration = 0;
+  let recoveryTimer = null;
+  let heartbeatTimer = null;
+  let fullSyncTimer = null;
+  let syncSequence = 0;
+  let moveTimer = null;
+  let lastMoveSent = 0;
+  let lastChatSent = 0;
+  let networkLabel = "未接続";
+  const connections = new Map();
+  const connectionSessions = new Map();
+  const participants = new Map();
+  const messages = [];
+  const chatRate = new Map();
+  const bubbles = new Map();
+  const emotes = new Map();
+  const blocked = readSet(BLOCK_KEY);
+  const muted = readSet(MUTE_KEY);
+
+  let visitorId = "";
+  try { visitorId = safeId(localStorage.getItem(VISITOR_KEY)); } catch {}
+  if (!visitorId) {
+    visitorId = randomId("visitor-");
+    try { localStorage.setItem(VISITOR_KEY, visitorId); } catch {}
+  }
+  const sessionId = randomId("session-");
+  let myPosition = {x:50 + Math.random()*8-4,y:62 + Math.random()*8-4};
+
+  function readCustomWorlds(){
+    try {
+      const list = JSON.parse(localStorage.getItem(CUSTOM_WORLDS_KEY) || "[]");
+      customWorlds = Array.isArray(list) ? list.map(normalizeWorld).filter(Boolean).slice(0,40) : [];
+    } catch { customWorlds = []; }
+  }
+  function saveCustomWorlds(){
+    try { localStorage.setItem(CUSTOM_WORLDS_KEY, JSON.stringify(customWorlds.slice(0,40))); } catch {}
+  }
+  function mergeCatalog(base){
+    const map = new Map();
+    [...(Array.isArray(base) ? base : []), ...customWorlds].forEach(item=>{
+      const world = normalizeWorld(item);
+      if (world) map.set(world.id, world);
+    });
+    return [...map.values()];
+  }
+  function isAdminUser(){
+    return window.teAdminAccess?.isAdmin?.() === true || window.teAdminAccess?.isOwner?.() === true;
+  }
+  function isOwnerUser(){ return window.teAdminAccess?.isOwner?.() === true; }
+  function updateAdminCreator(){
+    const card = $("teOwAdminCreator");
+    if (!card) return;
+    card.classList.toggle("teOwHidden", !isAdminUser());
+    const status = $("teOwCreatorStatus");
+    if (status && isAdminUser()) status.textContent = isOwnerUser()
+      ? "最高管理者モード：端末作成とGitHub永久公開を利用できます。"
+      : "管理者モード：端末内ワールドを作成できます。GitHub永久公開は最高管理者のみです。";
+  }
+  function persistName(silent = false){
+    const input = $("teOwName");
+    const typed = clean(input?.value, 24);
+    if (!typed) return "";
+    try { localStorage.setItem(NAME_KEY, typed); } catch {}
+    try { sessionStorage.setItem(NAME_SESSION_KEY, typed); } catch {}
+    const p = participants.get(sessionId);
+    if (p) { p.name = typed; participants.set(sessionId,p); }
+    if (!silent) setStatus(`表示名を「${typed}」に保存しました。次回も自動で使います。`);
+    return typed;
+  }
+  function scheduleNameSave(){
+    clearTimeout(nameSaveTimer);
+    nameSaveTimer = setTimeout(()=>persistName(true), 260);
+  }
+  function utf8Base64Url(value){
+    const bytes = new TextEncoder().encode(String(value));
+    let binary = "";
+    for (const byte of bytes) binary += String.fromCharCode(byte);
+    return btoa(binary).replace(/\+/g,"-").replace(/\//g,"_").replace(/=+$/g,"");
+  }
+  function bytesToBase64(bytes){
+    let binary = "";
+    const chunk = 0x8000;
+    for (let i=0;i<bytes.length;i+=chunk) binary += String.fromCharCode(...bytes.subarray(i,i+chunk));
+    return btoa(binary);
+  }
+  function decodeGithubBase64(value){
+    const binary = atob(String(value || "").replace(/\s/g,""));
+    const bytes = Uint8Array.from(binary, ch=>ch.charCodeAt(0));
+    return new TextDecoder().decode(bytes);
+  }
+  function readGithubAuth(){
+    try {
+      const auth = JSON.parse(sessionStorage.getItem(GITHUB_AUTH_KEY) || "null");
+      return auth?.token ? auth : null;
+    } catch { return null; }
+  }
+  function creatorWorld(){
+    const name = clean($("teOwCreateName")?.value,40);
+    if (!name) throw new Error("ワールド名を入力してください。");
+    let id = safeId($("teOwCreateId")?.value);
+    if (!id) id = "world-" + hash(name + "-" + Date.now()).slice(0,10);
+    const icon = clean($("teOwCreateIcon")?.value || "🌍",8) || "🌍";
+    const theme = ["plaza","game","theater","creative"].includes($("teOwCreateTheme")?.value) ? $("teOwCreateTheme").value : "plaza";
+    const description = clean($("teOwCreateDescription")?.value || "みんなで交流できる公開ワールド",180);
+    const tags = String($("teOwCreateTags")?.value || "").split(/[、,]/).map(item=>clean(item,18)).filter(Boolean).filter((item,index,list)=>list.indexOf(item)===index).slice(0,5);
+    const labels = String($("teOwCreateZones")?.value || "").split(/\r?\n/).map(item=>clean(item,30)).filter(Boolean).slice(0,8);
+    const positions = [[50,50],[20,24],[80,24],[20,78],[80,78],[50,18],[50,82],[30,50]];
+    const zones = (labels.length ? labels : ["🌐 メインエリア"]).map((label,index)=>({label,x:positions[index][0],y:positions[index][1]}));
+    return normalizeWorld({id,name,icon,theme,description,tags,zones});
+  }
+  function saveLocalWorld(world){
+    customWorlds = customWorlds.filter(item=>item.id!==world.id);
+    customWorlds.push(world);
+    saveCustomWorlds();
+    catalog = mergeCatalog(remoteCatalog);
+    renderCatalog();
+  }
+  async function publishWorldDirect(world){
+    const auth = readGithubAuth();
+    if (!auth?.token || String(auth.user?.login || "").toLowerCase() !== GITHUB_OWNER.toLowerCase()) return false;
+    const api = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${GITHUB_CATALOG_PATH}`;
+    const headers = {Accept:"application/vnd.github+json",Authorization:`Bearer ${auth.token}`,"X-GitHub-Api-Version":"2022-11-28"};
+    const current = await fetch(api + "?ref=" + encodeURIComponent(GITHUB_BRANCH), {cache:"no-store",headers});
+    if (!current.ok) throw new Error(`GitHub一覧を取得できませんでした（${current.status}）`);
+    const file = await current.json();
+    const data = JSON.parse(decodeGithubBase64(file.content));
+    const list = Array.isArray(data.worlds) ? data.worlds : [];
+    data.version = VERSION;
+    data.updatedAt = new Date().toISOString();
+    data.worlds = [...list.filter(item=>item?.id!==world.id), world].slice(0,100);
+    const encoded = bytesToBase64(new TextEncoder().encode(JSON.stringify(data,null,2) + "\n"));
+    const saved = await fetch(api, {method:"PUT",headers:{...headers,"Content-Type":"application/json"},body:JSON.stringify({message:`Publish public world: ${world.name}`,content:encoded,sha:file.sha,branch:GITHUB_BRANCH})});
+    if (!saved.ok) {
+      let detail = ""; try { detail = (await saved.json())?.message || ""; } catch {}
+      throw new Error(`GitHub保存に失敗しました（${saved.status}）${detail ? "："+detail : ""}`);
+    }
+    return true;
+  }
+  async function publishWorldCommandInEngine(world){
+    const auth = readGithubAuth();
+    if (!auth?.token || String(auth.user?.login || "").toLowerCase() !== GITHUB_OWNER.toLowerCase()) return null;
+    const body = ["ACTION: public_world_publish","WORLD_JSON_B64: " + utf8Base64Url(JSON.stringify(world)),"ENGINE_VERSION: " + VERSION].join("\n");
+    const response = await fetch(`https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/issues`, {
+      method:"POST",
+      headers:{Accept:"application/vnd.github+json",Authorization:`Bearer ${auth.token}`,"X-GitHub-Api-Version":"2022-11-28","Content-Type":"application/json"},
+      body:JSON.stringify({title:`[Troll管理] public_world_publish - ${world.name}`,body})
+    });
+    if (!response.ok) {
+      let detail = ""; try { detail = (await response.json())?.message || ""; } catch {}
+      throw new Error(`Troll Engine内のGitHub保存申請に失敗しました（${response.status}）${detail ? "："+detail : ""}`);
+    }
+    return response.json();
+  }
+  function openGithubLinkPanel(message){
+    const tab = $("te420GithubBackupTab");
+    try { if (tab && typeof showTab === "function") showTab("te420GithubBackupMain", tab); } catch {}
+    try { document.querySelector('[data-te420-panel="account"]')?.click(); } catch {}
+    setTimeout(()=>$("te420GithubBackupMain")?.scrollIntoView({behavior:"smooth",block:"start"}),80);
+    const status = $("teOwCreatorStatus");
+    if (status) status.textContent = message || "GitHub保存センターのアカウント連携を完了してから、もう一度公開してください。GitHubページへ移動する必要はありません。";
+  }
+  function schedulePublishedCatalogRefresh(){
+    [4500,11000,22000].forEach(delay=>setTimeout(()=>{ try { loadCatalog(); } catch {} },delay));
+  }
+  async function createWorld(publish){
+    if (!isAdminUser()) return alert("公開ワールドを作成できるのは管理者だけです。");
+    if (!window.teAdminAccess?.requireUnlock?.("公開ワールドを作成する")) return;
+    const status = $("teOwCreatorStatus");
+    try {
+      const world = creatorWorld();
+      saveLocalWorld(world);
+      if (!publish) {
+        if (status) status.textContent = `「${world.name}」をこの端末へ保存しました。すぐに参加できます。`;
+        setStatus(`管理者が「${world.name}」を作成しました。`);
+        return;
+      }
+      if (!isOwnerUser()) throw new Error("GitHubへ永久公開できるのは最高管理者だけです。");
+      if (status) status.textContent = "GitHubへ公開ワールドを保存しています…";
+      let directError = null;
+      try {
+        const direct = await publishWorldDirect(world);
+        if (direct) {
+          remoteCatalog = [...remoteCatalog.filter(item=>item.id!==world.id),world];
+          catalog = mergeCatalog(remoteCatalog);
+          renderCatalog();
+          if (status) status.textContent = `「${world.name}」をTroll Engine内からGitHubへ永久保存しました。全員の一覧へ反映されます。`;
+          setStatus(`公開ワールド「${world.name}」をGitHubへ保存しました。`);
+          return;
+        }
+      } catch (error) {
+        directError = error;
+        console.warn("[Public World] direct GitHub save failed", error);
+      }
+      try {
+        const issue = await publishWorldCommandInEngine(world);
+        if (issue) {
+          if (status) status.textContent = `「${world.name}」の保存申請をTroll Engine内から送信しました。GitHub Actionsが処理したあと全員へ自動反映します。`;
+          setStatus(`公開ワールド「${world.name}」を内部送信しました。反映を確認中です。`);
+          schedulePublishedCatalogRefresh();
+          return;
+        }
+      } catch (commandError) {
+        console.warn("[Public World] in-app GitHub command failed", commandError);
+        directError = commandError;
+      }
+      openGithubLinkPanel(`GitHubページは開きません。Troll Engine内の「GitHub保存 → アカウント連携」で最高管理者アカウントを連携し、ContentsまたはIssuesの書き込み権限を許可してください。${directError ? "\n詳細："+directError.message : ""}`);
+    } catch (error) {
+      if (status) status.textContent = error?.message || String(error);
+      alert(error?.message || String(error));
+    }
+  }
+  function resetCreator(){
+    ["teOwCreateName","teOwCreateId","teOwCreateDescription","teOwCreateTags","teOwCreateZones"].forEach(id=>{ if($(id)) $(id).value=""; });
+    if($("teOwCreateIcon")) $("teOwCreateIcon").value="🌍";
+    if($("teOwCreateTheme")) $("teOwCreateTheme").value="plaza";
+    if($("teOwCreatorStatus")) $("teOwCreatorStatus").textContent="入力をリセットしました。";
+  }
+
+  function getName(){
+    const input = $("teOwName");
+    let name = clean(input?.value, 24);
+    if (!name) {
+      try { name = clean(localStorage.getItem(NAME_KEY), 24); } catch {}
+    }
+    if (!name) {
+      try { name = clean(sessionStorage.getItem(NAME_SESSION_KEY), 24); } catch {}
+    }
+    if (!name) {
+      try { if (typeof state !== "undefined") name = clean(state.myName,24); } catch {}
+    }
+    return name && name !== "ななし" ? name : "ゲスト" + visitorId.slice(-4).toUpperCase();
+  }
+  function ownParticipant(host = isHost){
+    return {sessionId,visitorId,name:getName(),x:myPosition.x,y:myPosition.y,color:colorFor(visitorId),host:!!host,joinedAt:Date.now()};
+  }
+  function setStatus(text, bad = false){
+    const box = $("teOwStatus");
+    if (box) { box.textContent = clean(text,400); box.style.color = bad ? "#fca5a5" : "#a7f3d0"; }
+  }
+  function setNetwork(text){
+    networkLabel = clean(text,80);
+    if ($("teOwWorldNet")) $("teOwWorldNet").textContent = networkLabel;
+  }
+  function normalizeWorld(raw){
+    if (!raw || typeof raw !== "object") return null;
+    const id = safeId(raw.id);
+    const name = clean(raw.name,40);
+    if (!id || !name) return null;
+    const fallback = BUILTIN_WORLDS.find(item => item.id === id);
+    return {
+      id,name,
+      icon:clean(raw.icon || fallback?.icon || "🌍",4),
+      theme:["plaza","game","theater","creative"].includes(raw.theme) ? raw.theme : (fallback?.theme || "plaza"),
+      description:clean(raw.description || fallback?.description || "公開交流ワールド",180),
+      tags:(Array.isArray(raw.tags) ? raw.tags : fallback?.tags || []).slice(0,5).map(item=>clean(item,18)).filter(Boolean),
+      zones:(Array.isArray(raw.zones) ? raw.zones : fallback?.zones || []).slice(0,8).map(zone=>({label:clean(zone?.label,30),x:Math.max(5,Math.min(95,Number(zone?.x)||50)),y:Math.max(8,Math.min(92,Number(zone?.y)||50))})).filter(zone=>zone.label)
+    };
+  }
+  async function loadCatalog(){
+    setStatus("GitHubから公開ワールド一覧を確認しています…");
+    try {
+      const controller = new AbortController();
+      const timer = setTimeout(()=>controller.abort(),4500);
+      const response = await fetch(CATALOG_URL + "?v=" + Date.now(), {cache:"no-store",signal:controller.signal,headers:{Accept:"application/json"}});
+      clearTimeout(timer);
+      if (!response.ok) throw new Error("GitHub応答 " + response.status);
+      const data = await response.json();
+      const list = (Array.isArray(data) ? data : data?.worlds).map(normalizeWorld).filter(Boolean);
+      if (!list.length) throw new Error("ワールド一覧が空です");
+      remoteCatalog = list;
+      catalog = mergeCatalog(remoteCatalog);
+      setStatus(`GitHubから${list.length}個の公開ワールドを読み込みました。端末保存分を含めて${catalog.length}個表示しています。`);
+    } catch (error) {
+      remoteCatalog = [...BUILTIN_WORLDS];
+      catalog = mergeCatalog(remoteCatalog);
+      setStatus("内蔵と端末保存の公開ワールドを表示しています。GitHub一覧が使えるときは自動で切り替わります。");
+    }
+    renderCatalog();
+  }
+  function renderCatalog(){
+    const mount = $("teOwCatalog");
+    if (!mount) return;
+    mount.replaceChildren();
+    catalog.forEach((world,index)=>{
+      const card = document.createElement("article");
+      card.className = "teOwWorldCard";
+      card.style.setProperty("--ow-glow",[`rgba(56,189,248,.32)`,`rgba(236,72,153,.3)`,`rgba(239,68,68,.3)`,`rgba(250,204,21,.3)`][index%4]);
+      const icon = document.createElement("div"); icon.className="teOwWorldIcon"; icon.textContent=world.icon;
+      const title = document.createElement("h3"); title.textContent=world.name;
+      const desc = document.createElement("p"); desc.textContent=world.description;
+      const meta = document.createElement("div"); meta.className="teOwWorldMeta";
+      ["登録不要","P2P",...world.tags].slice(0,5).forEach(tag=>{ const span=document.createElement("span");span.textContent=tag;meta.appendChild(span); });
+      const button = document.createElement("button"); button.type="button"; button.className="mainBtn"; button.textContent=currentWorld?.id===world.id?"参加中":"このワールドに入る"; button.disabled=currentWorld?.id===world.id; button.addEventListener("click",()=>joinWorld(world.id));
+      card.append(icon,title,desc,meta,button); mount.appendChild(card);
+    });
+  }
+  function renderZones(){
+    const mount = $("teOwZones");
+    const stage = $("teOwStage");
+    if (!mount || !stage || !currentWorld) return;
+    stage.dataset.theme = currentWorld.theme;
+    mount.replaceChildren();
+    currentWorld.zones.forEach(zone=>{ const el=document.createElement("div");el.className="teOwZone";el.textContent=zone.label;el.style.left=zone.x+"%";el.style.top=zone.y+"%";mount.appendChild(el); });
+  }
+  function visibleParticipant(p){ return p && !blocked.has(p.visitorId); }
+  function renderAvatars(){
+    const mount = $("teOwAvatars");
+    if (!mount) return;
+    mount.replaceChildren();
+    participants.forEach(p=>{
+      if (!visibleParticipant(p)) return;
+      const avatar = document.createElement("div");
+      avatar.className = "teOwAvatar" + (p.sessionId===sessionId?" isMe":"");
+      avatar.style.left = Math.max(2,Math.min(98,Number(p.x)||50)) + "%";
+      avatar.style.top = Math.max(4,Math.min(96,Number(p.y)||50)) + "%";
+      avatar.style.background = p.color || colorFor(p.visitorId);
+      avatar.textContent = clean(p.name,1).toUpperCase() || "?";
+      const name = document.createElement("span"); name.className="teOwAvatarName"; name.textContent=(p.host?"👑 ":"")+clean(p.name,24);
+      avatar.appendChild(name);
+      const bubble = bubbles.get(p.sessionId);
+      if (bubble && bubble.until>Date.now()) { const el=document.createElement("span");el.className="teOwBubble";el.textContent=bubble.text;avatar.appendChild(el); }
+      const emote = emotes.get(p.sessionId);
+      if (emote && emote.until>Date.now()) { const el=document.createElement("span");el.className="teOwEmote";el.textContent=emote.value;avatar.appendChild(el); }
+      mount.appendChild(avatar);
+    });
+  }
+  function renderRoster(){
+    const mount = $("teOwRoster");
+    if (!mount) return;
+    mount.replaceChildren();
+    const list = [...participants.values()].filter(visibleParticipant).sort((a,b)=>Number(b.host)-Number(a.host)||a.name.localeCompare(b.name,"ja"));
+    if (!list.length) { mount.textContent="参加者なし"; return; }
+    list.forEach(p=>{
+      const row=document.createElement("div");row.className="teOwPerson";
+      const dot=document.createElement("span");dot.className="teOwDot";dot.style.background=p.color||colorFor(p.visitorId);
+      const text=document.createElement("div");text.className="teOwPersonText";
+      const b=document.createElement("b");b.textContent=(p.host?"👑 ":"")+(p.sessionId===sessionId?"自分・":"")+p.name;
+      const small=document.createElement("small");small.textContent="#"+p.visitorId.slice(-6).toUpperCase();text.append(b,small);
+      const actions=document.createElement("div");actions.className="teOwPersonActions";
+      if (p.sessionId!==sessionId) {
+        const mute=document.createElement("button");mute.type="button";mute.className="grayBtn";mute.textContent=muted.has(p.visitorId)?"解除":"ミュート";mute.title="この端末だけで相手のチャットを非表示";mute.addEventListener("click",()=>toggleMute(p.visitorId));
+        const report=document.createElement("button");report.type="button";report.className="warnBtn";report.textContent="報告";report.addEventListener("click",()=>reportParticipant(p));
+        const block=document.createElement("button");block.type="button";block.className="dangerBtn";block.textContent="ブロック";block.addEventListener("click",()=>blockParticipant(p));
+        actions.append(mute,report,block);
+      }
+      row.append(dot,text,actions);mount.appendChild(row);
+    });
+    if ($("teOwWorldCount")) $("teOwWorldCount").textContent = `${list.length}人`;
+  }
+  function messageVisible(msg){
+    if (msg.system) return true;
+    const p=participants.get(msg.sessionId);
+    if (p && (blocked.has(p.visitorId)||muted.has(p.visitorId))) return false;
+    if (msg.scope==="nearby" && msg.sessionId!==sessionId) {
+      const me=participants.get(sessionId)||ownParticipant();
+      if (!p || distance(me,p)>34) return false;
+    }
+    return true;
+  }
+  function renderChat(){
+    const log=$("teOwChatLog");if(!log)return;
+    const stayBottom=log.scrollTop+log.clientHeight>=log.scrollHeight-35;
+    log.replaceChildren();
+    messages.slice(-100).filter(messageVisible).forEach(msg=>{
+      const row=document.createElement("div");row.className="teOwMsg"+(msg.system?" system":"");
+      if(msg.system){row.textContent="• "+msg.text;}else{
+        const b=document.createElement("b");b.textContent=msg.name+(msg.scope==="nearby"?" 📍":"");
+        const small=document.createElement("small");small.textContent=nowTime(msg.time);
+        const body=document.createElement("div");body.textContent=msg.text;row.append(b,small,body);
+      }
+      log.appendChild(row);
+    });
+    if(stayBottom)log.scrollTop=log.scrollHeight;
+  }
+  function renderAll(){renderAvatars();renderRoster();renderChat();setNetwork(networkLabel);renderCatalog();}
+  function addSystem(text,broadcastIt=false){
+    const msg={id:randomId("msg-"),system:true,text:clean(text,220),time:Date.now()};messages.push(msg);while(messages.length>120)messages.shift();renderChat();
+    if(isHost&&broadcastIt)broadcast({type:"world_system",message:msg});
+  }
+  function addChatMessage(msg,broadcastIt=false){
+    const item={id:clean(msg.id,80)||randomId("msg-"),sessionId:clean(msg.sessionId,80),name:clean(msg.name,24)||"ゲスト",text:clean(msg.text,160),scope:msg.scope==="nearby"?"nearby":"all",time:Number(msg.time)||Date.now()};
+    if(!item.text)return;
+    if(messages.some(old=>old.id===item.id))return;
+    messages.push(item);while(messages.length>120)messages.shift();
+    bubbles.set(item.sessionId,{text:item.text,until:Date.now()+5200});setTimeout(()=>{renderAvatars();},5300);
+    renderChat();renderAvatars();
+    if(isHost&&broadcastIt){broadcast({type:"world_chat",message:item});queueFullSync(70);}
+  }
+  function rosterPayload(){return [...participants.values()].map(p=>({sessionId:p.sessionId,visitorId:p.visitorId,name:p.name,x:p.x,y:p.y,color:p.color,host:!!p.host,joinedAt:p.joinedAt}));}
+  function activeEmotesPayload(){
+    const now=Date.now(), rows=[];
+    emotes.forEach((entry,sid)=>{if(entry&&entry.until>now)rows.push({sessionId:sid,value:clean(entry.value,4),until:entry.until});});
+    return rows.slice(-MAX_PEOPLE);
+  }
+  function broadcast(data,except=null){connections.forEach(conn=>{if(conn!==except&&conn?.open){try{conn.send(data);}catch{}}});}
+  function broadcastRoster(){broadcast({type:"world_roster",participants:rosterPayload(),time:Date.now()});}
+  function broadcastFullSync(){
+    if(!isHost)return;
+    fullSyncTimer=null;
+    broadcast({type:"world_sync",sequence:++syncSequence,participants:rosterPayload(),messages:messages.slice(-60),emotes:activeEmotesPayload(),time:Date.now()});
+  }
+  function queueFullSync(delay=90){
+    if(!isHost||fullSyncTimer)return;
+    fullSyncTimer=setTimeout(broadcastFullSync,Math.max(20,Number(delay)||90));
+  }
+  function mergeSyncedMessages(list){
+    (Array.isArray(list)?list:[]).slice(-60).forEach(raw=>{
+      if(raw?.system){
+        const id=clean(raw.id,80)||randomId("msg-");
+        if(!messages.some(old=>old.id===id))messages.push({id,system:true,text:clean(raw.text,220),time:Number(raw.time)||Date.now()});
+      }else addChatMessage(raw,false);
+    });
+    while(messages.length>120)messages.shift();
+  }
+  function applySyncedEmotes(list){
+    const now=Date.now();
+    (Array.isArray(list)?list:[]).forEach(raw=>{
+      const sid=clean(raw?.sessionId,80),value=clean(raw?.value,4),until=Number(raw?.until)||now+1500;
+      if(sid&&value&&until>now)emotes.set(sid,{value,until});
+    });
+  }
+  function applyFullSync(data){
+    applyRoster(data?.participants);
+    mergeSyncedMessages(data?.messages);
+    applySyncedEmotes(data?.emotes);
+    renderAll();
+  }
+  function destroyNetwork(){
+    clearTimeout(recoveryTimer);clearInterval(heartbeatTimer);heartbeatTimer=null;clearTimeout(fullSyncTimer);fullSyncTimer=null;
+    connections.forEach(conn=>{try{conn.close();}catch{}});connections.clear();connectionSessions.clear();
+    try{hostConn?.close();}catch{}hostConn=null;
+    try{peer?.destroy();}catch{}peer=null;isHost=false;
+  }
+  function applyRoster(list){
+    const incoming=new Map();
+    (Array.isArray(list)?list:[]).slice(0,MAX_PEOPLE).forEach(raw=>{
+      const sid=clean(raw?.sessionId,80),vid=safeId(raw?.visitorId),name=clean(raw?.name,24);
+      if(!sid||!vid||!name)return;
+      incoming.set(sid,{sessionId:sid,visitorId:vid,name,x:Math.max(2,Math.min(98,Number(raw.x)||50)),y:Math.max(4,Math.min(96,Number(raw.y)||50)),color:colorFor(vid),host:!!raw.host,joinedAt:Number(raw.joinedAt)||Date.now()});
+    });
+    participants.clear();incoming.forEach((v,k)=>participants.set(k,v));
+    if(!participants.has(sessionId))participants.set(sessionId,ownParticipant(false));
+    renderAll();
+  }
+  function handleGuestData(data){
+    if(!data||typeof data!=="object")return;
+    if(data.type==="world_snapshot"){
+      applyRoster(data.participants);
+      messages.splice(0,messages.length,...(Array.isArray(data.messages)?data.messages.slice(-40).map(m=>m.system?{id:clean(m.id,80),system:true,text:clean(m.text,220),time:Number(m.time)||Date.now()}:{id:clean(m.id,80),sessionId:clean(m.sessionId,80),name:clean(m.name,24),text:clean(m.text,160),scope:m.scope==="nearby"?"nearby":"all",time:Number(m.time)||Date.now()}):[]));
+      applySyncedEmotes(data.emotes);renderChat();setStatus(`${currentWorld.name} に参加しました。友達登録なしで交流できます。`);setNetwork("P2P全員同期中");
+    }else if(data.type==="world_sync")applyFullSync(data);
+    else if(data.type==="world_roster")applyRoster(data.participants);
+    else if(data.type==="world_update"){
+      const p=participants.get(clean(data.participant?.sessionId,80));if(p){p.x=Math.max(2,Math.min(98,Number(data.participant.x)||p.x));p.y=Math.max(4,Math.min(96,Number(data.participant.y)||p.y));p.name=clean(data.participant.name,24)||p.name;renderAvatars();}
+    }else if(data.type==="world_chat")addChatMessage(data.message,false);
+    else if(data.type==="world_system"){const m=data.message||{};if(!messages.some(old=>old.id===m.id)){messages.push({id:clean(m.id,80)||randomId("msg-"),system:true,text:clean(m.text,220),time:Number(m.time)||Date.now()});renderChat();}}
+    else if(data.type==="world_emote"){const sid=clean(data.sessionId,80);const value=clean(data.value,4);if(sid&&value){emotes.set(sid,{value,until:Date.now()+2600});renderAvatars();setTimeout(renderAvatars,2700);}}
+    else if(data.type==="world_full"){setStatus("このワールドは満員です。少し待ってから入り直してください。",true);leaveWorld(false);}
+    else if(data.type==="world_host_leaving"){setNetwork("ホスト交代中");scheduleRecovery();}
+  }
+  function rateOkay(peerId){
+    const now=Date.now();const history=(chatRate.get(peerId)||[]).filter(t=>now-t<10000);if(history.length>=6)return false;history.push(now);chatRate.set(peerId,history);return true;
+  }
+  function setupHostConnection(conn){
+    if(!conn)return;
+    connections.set(conn.peer,conn);
+    let ready=false;
+    const timeout=setTimeout(()=>{if(!ready){connections.delete(conn.peer);try{conn.close();}catch{}}},9000);
+    conn.on("data",data=>{
+      if(!data||typeof data!=="object")return;
+      if(data.type==="world_hello"){
+        if(ready)return;
+        if(participants.size>=MAX_PEOPLE){try{conn.send({type:"world_full"});conn.close();}catch{}return;}
+        const sid=clean(data.sessionId,80),vid=safeId(data.visitorId),name=clean(data.name,24);
+        if(!sid||!vid||!name)return;
+        ready=true;clearTimeout(timeout);connectionSessions.set(conn.peer,sid);
+        participants.set(sid,{sessionId:sid,visitorId:vid,name,x:Math.max(2,Math.min(98,Number(data.x)||50)),y:Math.max(4,Math.min(96,Number(data.y)||62)),color:colorFor(vid),host:false,joinedAt:Date.now()});
+        try{conn.send({type:"world_snapshot",participants:rosterPayload(),messages:messages.slice(-40),emotes:activeEmotesPayload(),time:Date.now()});}catch{}
+        addSystem(`${name} がワールドに参加しました`,true);broadcastRoster();queueFullSync(40);renderAll();
+      }else if(!ready)return;
+      else if(data.type==="world_move"){
+        const sid=connectionSessions.get(conn.peer),p=participants.get(sid);if(!p)return;p.x=Math.max(2,Math.min(98,Number(data.x)||p.x));p.y=Math.max(4,Math.min(96,Number(data.y)||p.y));broadcast({type:"world_update",participant:{sessionId:sid,x:p.x,y:p.y,name:p.name}});queueFullSync(60);renderAvatars();
+      }else if(data.type==="world_chat"){
+        if(!rateOkay(conn.peer))return;
+        const sid=connectionSessions.get(conn.peer),p=participants.get(sid);if(!p)return;addChatMessage({id:randomId("msg-"),sessionId:sid,name:p.name,text:data.text,scope:data.scope,time:Date.now()},true);
+      }else if(data.type==="world_emote"){
+        const sid=connectionSessions.get(conn.peer),value=clean(data.value,4);if(!sid||!value)return;emotes.set(sid,{value,until:Date.now()+2600});broadcast({type:"world_emote",sessionId:sid,value,time:Date.now()});queueFullSync(50);renderAvatars();setTimeout(renderAvatars,2700);
+      }else if(data.type==="world_name"){
+        const sid=connectionSessions.get(conn.peer),p=participants.get(sid),name=clean(data.name,24);if(p&&name){p.name=name;broadcastRoster();queueFullSync(40);renderAll();}
+      }
+    });
+    const remove=()=>{
+      clearTimeout(timeout);connections.delete(conn.peer);const sid=connectionSessions.get(conn.peer);connectionSessions.delete(conn.peer);const p=participants.get(sid);if(sid)participants.delete(sid);if(p)addSystem(`${p.name} が退出しました`,true);broadcastRoster();queueFullSync(40);renderAll();
+    };
+    conn.on("close",remove);conn.on("error",remove);
+  }
+  function becomeHost(gen){
+    if(gen!==joinGeneration||leaving||!currentWorld)return;
+    isHost=true;hostConn=null;participants.clear();participants.set(sessionId,ownParticipant(true));messages.splice(0,messages.length);addSystem(`${getName()} が公開ワールドを開始しました`,false);
+    setNetwork("P2Pホスト");setStatus(`${currentWorld.name} を開始しました。次の参加者は自動でこのワールドへつながります。`);renderAll();
+    peer.on("connection",setupHostConnection);
+    heartbeatTimer=setInterval(()=>{broadcastFullSync();},1200);
+  }
+  function claimHost(gen,attempt=0){
+    if(gen!==joinGeneration||leaving||!currentWorld)return;
+    destroyNetwork();setNetwork("ワールドを起動中");setStatus(`${currentWorld.name} の入口を準備しています…`);
+    const delay=180+Math.floor(Math.random()*520);
+    recoveryTimer=setTimeout(()=>{
+      if(gen!==joinGeneration||leaving||!currentWorld)return;
+      try{
+        peer=new Peer(hostPeerId(currentWorld.id),SERVER_OPTIONS);
+        peer.on("open",()=>becomeHost(gen));
+        peer.on("error",error=>{
+          const type=String(error?.type||"");
+          if(type==="unavailable-id"||type==="peer-unavailable"){setTimeout(()=>connectAsGuest(gen,attempt+1),400+Math.random()*700);}
+          else if(gen===joinGeneration&&!leaving){setStatus("P2P接続を再試行しています…",true);setTimeout(()=>connectAsGuest(gen,attempt+1),1400);}
+        });
+        peer.on("disconnected",()=>{try{peer.reconnect();}catch{}});
+      }catch{setTimeout(()=>connectAsGuest(gen,attempt+1),1200);}
+    },delay);
+  }
+  function connectAsGuest(gen,attempt=0){
+    if(gen!==joinGeneration||leaving||!currentWorld)return;
+    destroyNetwork();setNetwork("P2P接続中");setStatus(`${currentWorld.name} に接続しています…`);
+    try{
+      peer=new Peer(randomId("troll-world-guest-"),SERVER_OPTIONS);
+      let settled=false;
+      peer.on("open",()=>{
+        if(gen!==joinGeneration||leaving)return;
+        const conn=peer.connect(hostPeerId(currentWorld.id),{reliable:true,serialization:"json",metadata:{world:currentWorld.id,version:VERSION}});hostConn=conn;
+        const timeout=setTimeout(()=>{if(!settled){settled=true;claimHost(gen,attempt);}},3600+Math.min(attempt,4)*500);
+        conn.on("open",()=>{
+          if(settled)return;settled=true;clearTimeout(timeout);isHost=false;
+          participants.clear();participants.set(sessionId,ownParticipant(false));
+          conn.send({type:"world_hello",sessionId,visitorId,name:getName(),x:myPosition.x,y:myPosition.y,time:Date.now()});
+          conn.on("data",handleGuestData);
+          conn.on("close",()=>{if(hostConn===conn&&!leaving&&gen===joinGeneration)scheduleRecovery();});
+          conn.on("error",()=>{if(hostConn===conn&&!leaving&&gen===joinGeneration)scheduleRecovery();});
+          setNetwork("P2P全員同期中");renderAll();
+        });
+        conn.on("error",()=>{if(!settled){settled=true;clearTimeout(timeout);claimHost(gen,attempt);}});
+      });
+      peer.on("error",error=>{
+        const type=String(error?.type||"");
+        if(!settled&&(type==="peer-unavailable"||type==="network"||type==="server-error")){settled=true;claimHost(gen,attempt);}
+      });
+      peer.on("disconnected",()=>{try{peer.reconnect();}catch{}});
+    }catch{claimHost(gen,attempt);}
+  }
+  function scheduleRecovery(){
+    if(leaving||!currentWorld)return;
+    clearTimeout(recoveryTimer);setNetwork("ホスト交代中");setStatus("接続が切れたため、自動でワールドへ戻っています…");
+    const gen=joinGeneration;
+    recoveryTimer=setTimeout(()=>{if(gen===joinGeneration&&!leaving)connectAsGuest(gen,1);},900+Math.random()*1600);
+  }
+  function joinWorld(id){
+    persistName(true);
+    const world=catalog.find(item=>item.id===id)||BUILTIN_WORLDS.find(item=>item.id===id);if(!world)return;
+    if(typeof window.Peer!=="function"){setStatus("PeerJSを読み込めません。ネット接続を確認してください。",true);return;}
+    leaveWorld(false);leaving=false;currentWorld=normalizeWorld(world);joinGeneration++;const gen=joinGeneration;
+    myPosition={x:46+Math.random()*8,y:62+Math.random()*8};
+    $("teOwJoined")?.classList.remove("teOwHidden");if($("teOwCurrentTitle"))$("teOwCurrentTitle").textContent=currentWorld.icon+" "+currentWorld.name;if($("teOwCurrentDescription"))$("teOwCurrentDescription").textContent=currentWorld.description;
+    renderZones();renderCatalog();participants.set(sessionId,ownParticipant(false));renderAll();
+    setTimeout(()=>$("teOwJoined")?.scrollIntoView({behavior:"smooth",block:"start"}),80);
+    connectAsGuest(gen,0);
+  }
+  function leaveWorld(show=true){
+    leaving=true;joinGeneration++;clearTimeout(recoveryTimer);
+    if(isHost)broadcast({type:"world_host_leaving",time:Date.now()});
+    if(hostConn?.open){try{hostConn.send({type:"world_leave",sessionId,time:Date.now()});}catch{}}
+    destroyNetwork();participants.clear();messages.splice(0,messages.length);bubbles.clear();emotes.clear();currentWorld=null;
+    $("teOwJoined")?.classList.add("teOwHidden");setNetwork("未接続");renderCatalog();
+    if(show)setStatus("公開ワールドから退出しました。別のワールドへすぐ参加できます。");
+  }
+  function sendMove(){
+    const p=participants.get(sessionId)||ownParticipant(isHost);p.x=myPosition.x;p.y=myPosition.y;p.name=getName();participants.set(sessionId,p);renderAvatars();renderChat();
+    const now=Date.now();if(now-lastMoveSent<75){clearTimeout(moveTimer);moveTimer=setTimeout(sendMove,80);return;}lastMoveSent=now;
+    if(isHost){broadcast({type:"world_update",participant:{sessionId,x:p.x,y:p.y,name:p.name},time:now});queueFullSync(60);}
+    else if(hostConn?.open){try{hostConn.send({type:"world_move",x:p.x,y:p.y,time:now});}catch{}}
+  }
+  function moveBy(dx,dy){if(!currentWorld)return;myPosition.x=Math.max(2,Math.min(98,myPosition.x+dx));myPosition.y=Math.max(4,Math.min(96,myPosition.y+dy));sendMove();}
+  function sendChat(){
+    if(!currentWorld)return setStatus("先に公開ワールドへ参加してください。",true);
+    const input=$("teOwChatInput"),text=clean(input?.value,160);if(!text)return;
+    const now=Date.now();if(now-lastChatSent<650)return setStatus("連続送信は少し待ってください。",true);lastChatSent=now;
+    const scope=$("teOwChatScope")?.value==="nearby"?"nearby":"all";
+    if(isHost)addChatMessage({id:randomId("msg-"),sessionId,name:getName(),text,scope,time:now},true);
+    else if(hostConn?.open){try{hostConn.send({type:"world_chat",text,scope,time:now});}catch{return setStatus("メッセージを送信できませんでした。",true);}}
+    else return setStatus("P2P接続を準備中です。少し待ってください。",true);
+    input.value="";
+  }
+  function sendEmote(value){
+    value=clean(value,4);if(!currentWorld||!value)return;
+    emotes.set(sessionId,{value,until:Date.now()+2600});renderAvatars();setTimeout(renderAvatars,2700);
+    if(isHost){broadcast({type:"world_emote",sessionId,value,time:Date.now()});queueFullSync(50);}else if(hostConn?.open){try{hostConn.send({type:"world_emote",value,time:Date.now()});}catch{}}
+  }
+  function saveName(){
+    const name = persistName(false) || getName();
+    if($("teOwName")) $("teOwName").value=name;
+    const p=participants.get(sessionId);if(p){p.name=name;participants.set(sessionId,p);}
+    if(isHost){broadcastRoster();queueFullSync(40);renderAll();}else if(hostConn?.open){try{hostConn.send({type:"world_name",name,time:Date.now()});}catch{}}
+  }
+  function toggleMute(id){if(muted.has(id))muted.delete(id);else muted.add(id);saveSet(MUTE_KEY,muted);renderAll();}
+  function blockParticipant(p){
+    if(!p||p.sessionId===sessionId)return;
+    if(!confirm(`${p.name} をこの端末でブロックしますか？\n相手の表示とチャットが見えなくなります。`))return;
+    blocked.add(p.visitorId);saveSet(BLOCK_KEY,blocked);renderAll();setStatus(`${p.name} をこの端末でブロックしました。`);
+  }
+  function reportParticipant(p){
+    if(!p||p.sessionId===sessionId)return;
+    const reason=clean(prompt("通報理由を短く入力してください。通報内容はこの端末内の記録へ保存されます。","迷惑行為"),100);if(!reason)return;
+    let reports=[];try{reports=JSON.parse(localStorage.getItem(REPORT_KEY)||"[]");if(!Array.isArray(reports))reports=[];}catch{}
+    reports.push({time:new Date().toISOString(),world:currentWorld?.id||"",worldName:currentWorld?.name||"",visitorId:p.visitorId,name:p.name,reason,recentMessages:messages.filter(m=>m.sessionId===p.sessionId).slice(-5)});
+    try{localStorage.setItem(REPORT_KEY,JSON.stringify(reports.slice(-50)));}catch{}
+    setStatus(`${p.name} の通報記録を端末内へ保存しました。中央サーバーは使っていないため、自動送信はされません。`);
+  }
+  function clearBlocks(){
+    const count=blocked.size,mutes=muted.size;
+    if(!count&&!mutes)return alert("現在、ブロック・ミュートしている相手はいません。");
+    if(confirm(`ブロック ${count}件、ミュート ${mutes}件をすべて解除しますか？`)){blocked.clear();muted.clear();saveSet(BLOCK_KEY,blocked);saveSet(MUTE_KEY,muted);renderAll();setStatus("ブロックとミュートをすべて解除しました。");}
+  }
+  function stagePointer(event){
+    if(!currentWorld)return;const stage=$("teOwStage");if(!stage)return;const rect=stage.getBoundingClientRect();myPosition.x=Math.max(2,Math.min(98,(event.clientX-rect.left)/rect.width*100));myPosition.y=Math.max(4,Math.min(96,(event.clientY-rect.top)/rect.height*100));sendMove();stage.focus({preventScroll:true});
+  }
+  function keyMove(event){
+    if(!currentWorld||!$("teOpenWorldV421")?.classList.contains("active"))return;
+    const tag=document.activeElement?.tagName;if(tag==="INPUT"||tag==="TEXTAREA"||tag==="SELECT")return;
+    const key=event.key.toLowerCase();let dx=0,dy=0;if(key==="arrowleft"||key==="a")dx=-3;if(key==="arrowright"||key==="d")dx=3;if(key==="arrowup"||key==="w")dy=-3;if(key==="arrowdown"||key==="s")dy=3;if(dx||dy){event.preventDefault();moveBy(dx,dy);}
+  }
+  function boot(){
+    readCustomWorlds();
+    let name="";try{name=clean(localStorage.getItem(NAME_KEY),24);}catch{}
+    if(!name){try{name=clean(sessionStorage.getItem(NAME_SESSION_KEY),24);}catch{}}
+    if(!name){try{if(typeof state!=="undefined")name=clean(state.myName,24);}catch{}}
+    if($("teOwName")) $("teOwName").value=name&&name!=="ななし"?name:"";
+    if(name && name!=="ななし"){try{localStorage.setItem(NAME_KEY,name);sessionStorage.setItem(NAME_SESSION_KEY,name);}catch{}}
+    $("teOwName")?.addEventListener("input",scheduleNameSave);
+    $("teOwName")?.addEventListener("change",()=>persistName(true));
+    $("teOwName")?.addEventListener("blur",()=>persistName(true));
+    $("teOwChatInput")?.addEventListener("keydown",event=>{if(event.key==="Enter"){event.preventDefault();sendChat();}});
+    $("teOwStage")?.addEventListener("pointerdown",stagePointer);
+    window.addEventListener("keydown",keyMove);
+    window.addEventListener("pagehide",()=>{persistName(true);leaveWorld(false);});
+    updateAdminCreator();
+    setTimeout(updateAdminCreator,350);
+    loadCatalog();
+  }
+
+  window.teOpenWorldV422 = window.teOpenWorldV4212 = {
+    open(){ updateAdminCreator(); if(!$("teOwCatalog")?.children.length)loadCatalog(); },
+    refreshCatalog:loadCatalog,
+    join:joinWorld,
+    leave:()=>leaveWorld(true),
+    sendChat,
+    emote:sendEmote,
+    saveName,
+    clearBlocks,
+    createWorld,
+    resetCreator,
+    __ready:true
+  };
+  try{window.teOpenWorldV421=window.teOpenWorldV422;}catch{}
+  if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",boot,{once:true});else boot();
+})();
+</script>
+<!-- ===== Troll Public World v4.21 SCRIPT END ===== -->
+<script id="teOpenWorldV422Finalizer">
+(() => {
+  const apply = () => {
+    const meta = document.querySelector('meta[name="troll-engine-classic-version"]');
+    if (meta) meta.content = "4.23";
+    document.documentElement.dataset.trollEngineClassic = "4.23";
+    document.title = "Troll Engine - Classic Standard Edition v4.23 - Public World All Peer Sync";
+    console.info("[Troll Engine] v4.23 all-participant P2P synchronization and in-app GitHub publishing ready");
+  };
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", apply, {once:true});
+  else apply();
+})();
+</script>
 </body></html>`}
   function ensureShop(){let root=document.getElementById("teShopRoot");if(root)return root;const plus=document.getElementById("plus");if(!plus)return null;root=document.createElement("div");root.id="teShopRoot";root.className="card";root.innerHTML=`<div class="teShopHeader"><div><h2>🛍️ 拡張パック・ショッピング</h2><p class="note">追加パックは新しい上部タブを作らず、ここへ追加されます。JSONを選ぶだけで登録できます。</p></div><div class="teShopTools"><label class="mainBtn" style="display:inline-block;padding:11px 14px;border-radius:11px;cursor:pointer">JSONを読み込む<input id="teShopFile" type="file" accept=".json,application/json"></label><button class="grayBtn" id="teShopRefresh">更新</button></div></div><div id="teShopGrid" class="teShopGrid"></div><div id="teShopViewer"><div class="teShopViewerBar"><b id="teShopViewerTitle">追加パック</b><button class="grayBtn" id="teShopViewerClose">閉じる</button></div><iframe id="teShopFrame" class="teExtFrame" sandbox="allow-scripts allow-forms allow-modals allow-downloads" referrerpolicy="no-referrer"></iframe></div>`;plus.appendChild(root);root.querySelector("#teShopFile").addEventListener("change",importLocalFile);root.querySelector("#teShopRefresh").onclick=renderShop;root.querySelector("#teShopViewerClose").onclick=closeViewer;return root}
   function getProducts(pack){const p=pack.contributes?.store?.products;return Array.isArray(p)?p:[]}
