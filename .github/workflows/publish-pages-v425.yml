@@ -41,3 +41,5 @@ jobs:
           git commit -m "Publish Troll Engine v4.25 Owner Studio"
           git pull --rebase origin main
           git push origin main
+
+# Triggered after all v4.25 components were committed.
