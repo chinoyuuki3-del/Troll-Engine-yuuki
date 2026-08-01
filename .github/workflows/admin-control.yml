@@ -12,8 +12,16 @@ on:
         type: choice
         options:
           - admin_posts_replace
+      payload_field:
+        description: Payload encoding field
+        required: true
+        default: ADMIN_POSTS_GZIP_B64
+        type: choice
+        options:
+          - ADMIN_POSTS_GZIP_B64
+          - ADMIN_POSTS_JSON_B64
       payload:
-        description: Gzip Base64URL management payload
+        description: Base64URL management payload
         required: true
         type: string
       message:
@@ -59,6 +67,7 @@ jobs:
         if: github.event_name == 'workflow_dispatch'
         env:
           OWNER_ACTION: ${{ inputs.action }}
+          OWNER_PAYLOAD_FIELD: ${{ inputs.payload_field }}
           OWNER_PAYLOAD: ${{ inputs.payload }}
           OWNER_MESSAGE: ${{ inputs.message }}
           ISSUE_NUMBER: workflow-dispatch
@@ -67,7 +76,11 @@ jobs:
             echo "Unsupported Owner Studio action: $OWNER_ACTION" >&2
             exit 1
           fi
-          ISSUE_BODY="$(printf 'ACTION: admin_posts_replace\nADMIN_POSTS_GZIP_B64: %s\nENGINE_VERSION: 4.26.1\nMESSAGE: %s\n' "$OWNER_PAYLOAD" "$OWNER_MESSAGE")"
+          case "$OWNER_PAYLOAD_FIELD" in
+            ADMIN_POSTS_GZIP_B64|ADMIN_POSTS_JSON_B64) ;;
+            *) echo "Unsupported payload field" >&2; exit 1 ;;
+          esac
+          ISSUE_BODY="$(printf 'ACTION: admin_posts_replace\n%s: %s\nENGINE_VERSION: 4.26.1\nMESSAGE: %s\n' "$OWNER_PAYLOAD_FIELD" "$OWNER_PAYLOAD" "$OWNER_MESSAGE")"
           export ISSUE_BODY
           python3 scripts/admin-posts-publish.py
 
