@@ -3,6 +3,24 @@ name: Troll Engine yuuki owner control
 on:
   issues:
     types: [opened]
+  workflow_dispatch:
+    inputs:
+      action:
+        description: Owner Studio action
+        required: true
+        default: admin_posts_replace
+        type: choice
+        options:
+          - admin_posts_replace
+      payload:
+        description: Gzip Base64URL management payload
+        required: true
+        type: string
+      message:
+        description: Commit message
+        required: false
+        default: Troll Engine 管理更新
+        type: string
 
 permissions:
   contents: write
@@ -14,12 +32,13 @@ concurrency:
 
 jobs:
   update-management:
-    if: github.actor == 'chinoyuuki3-del' && startsWith(github.event.issue.title, '[Troll管理]')
+    if: github.actor == 'chinoyuuki3-del' && (github.event_name == 'workflow_dispatch' || startsWith(github.event.issue.title, '[Troll管理]'))
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
-      - name: Validate owner command
+      - name: Validate owner command from issue
+        if: github.event_name == 'issues'
         env:
           ISSUE_BODY: ${{ github.event.issue.body }}
           ISSUE_NUMBER: ${{ github.event.issue.number }}
@@ -36,6 +55,22 @@ jobs:
             python3 scripts/admin-control.py
           fi
 
+      - name: Apply Owner Studio direct dispatch
+        if: github.event_name == 'workflow_dispatch'
+        env:
+          OWNER_ACTION: ${{ inputs.action }}
+          OWNER_PAYLOAD: ${{ inputs.payload }}
+          OWNER_MESSAGE: ${{ inputs.message }}
+          ISSUE_NUMBER: workflow-dispatch
+        run: |
+          if [ "$OWNER_ACTION" != "admin_posts_replace" ]; then
+            echo "Unsupported Owner Studio action: $OWNER_ACTION" >&2
+            exit 1
+          fi
+          ISSUE_BODY="$(printf 'ACTION: admin_posts_replace\nADMIN_POSTS_GZIP_B64: %s\nENGINE_VERSION: 4.26.1\nMESSAGE: %s\n' "$OWNER_PAYLOAD" "$OWNER_MESSAGE")"
+          export ISSUE_BODY
+          python3 scripts/admin-posts-publish.py
+
       - name: Commit management data
         run: |
           git config user.name "Troll Engine yuuki Bot"
@@ -45,6 +80,7 @@ jobs:
           git push
 
       - name: Close command
+        if: github.event_name == 'issues'
         env:
           GH_TOKEN: ${{ github.token }}
           ISSUE_URL: ${{ github.event.issue.html_url }}
