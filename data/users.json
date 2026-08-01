@@ -1,0 +1,38 @@
+{
+  "service": "Troll Engine User Directory",
+  "schema_version": 1,
+  "updated_at": "2026-07-31",
+  "privacy": {
+    "public_fields": [
+      "id",
+      "username",
+      "status",
+      "searchable",
+      "ban_until"
+    ],
+    "forbidden_fields": [
+      "email",
+      "password",
+      "owner_key",
+      "access_token",
+      "address",
+      "location"
+    ]
+  },
+  "users": [
+    {
+      "id": "fc-746ff05f-8041-4b1b-93cc-5df920db48a2",
+      "username": "123",
+      "status": "active",
+      "searchable": true,
+      "ban_until": 0
+    },
+    {
+      "id": "fc-345f904f-a526-4032-81a1-340032a9df3d",
+      "username": "1234",
+      "status": "active",
+      "searchable": true,
+      "ban_until": 0
+    }
+  ]
+}
