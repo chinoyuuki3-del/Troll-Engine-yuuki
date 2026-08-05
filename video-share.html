@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Troll Engine Video Share Beta</title>
+  <style>
+    *{box-sizing:border-box}body{margin:0;background:#07111f;color:#f8fafc;font-family:system-ui,-apple-system,sans-serif}header{padding:18px;text-align:center;background:linear-gradient(135deg,#0f172a,#12304a);border-bottom:2px solid #38bdf8}main{max-width:980px;margin:auto;padding:14px}.card{background:#102033;border:1px solid #1f3b57;border-radius:18px;padding:15px;margin:12px 0}.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}@media(max-width:720px){.grid{grid-template-columns:1fr}}input,button{width:100%;padding:12px;margin:5px 0;border:0;border-radius:11px;font-size:16px}button{background:#22c55e;color:#fff;font-weight:800;cursor:pointer}button.secondary{background:#3b82f6}button:disabled{opacity:.55}.status{min-height:24px;color:#a7f3d0;font-weight:700}.videos{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}.videoCard{background:#07111f;border:1px solid #334155;border-radius:14px;padding:10px}video{width:100%;background:#000;border-radius:10px;max-height:300px}.meta{color:#cbd5e1;font-size:13px;word-break:break-all}.progress{height:12px;border-radius:999px;background:#1e293b;overflow:hidden}.progress>div{height:100%;width:0;background:#38bdf8}.note{color:#cbd5e1;line-height:1.6}.badge{display:inline-block;padding:4px 8px;border-radius:999px;background:#1e293b;font-size:12px;margin:2px}</style>
+</head>
+<body>
+<header><h1>🎥 Troll Engine Video Share</h1><div>Blob共有ベータ v4.29-beta.2</div></header>
+<main>
+  <section class="card">
+    <h2>動画を全端末へ共有</h2>
+    <p class="note">動画本体はVercel Blobへ直接送信されます。ライブ配信は従来どおりP2Pのままで、この画面は投稿済み動画の共有専用です。</p>
+    <div class="grid">
+      <label>表示名<input id="uploader" maxlength="80" placeholder="投稿者名"></label>
+      <label>動画タイトル<input id="title" maxlength="120" placeholder="動画タイトル"></label>
+    </div>
+    <label>アップロードキー<input id="apiKey" type="password" autocomplete="off" placeholder="Troll Engineのアップロードキー"></label>
+    <input id="file" type="file" accept="video/mp4,video/webm,video/quicktime,video/x-m4v">
+    <div class="progress"><div id="bar"></div></div>
+    <button id="uploadBtn">動画を共有する</button>
+    <div id="status" class="status"></div>
+  </section>
+  <section class="card">
+    <div class="grid"><h2>共有動画一覧</h2><button id="refreshBtn" class="secondary">一覧を更新</button></div>
+    <div id="videos" class="videos"></div>
+  </section>
+</main>
+<script type="module">
+import { upload } from 'https://esm.sh/@vercel/blob/client';
+const $=id=>document.getElementById(id);
+const apiKey=$('apiKey'), uploader=$('uploader'), title=$('title'), file=$('file'), status=$('status'), bar=$('bar'), uploadBtn=$('uploadBtn'), videos=$('videos');
+apiKey.value=localStorage.getItem('teBlobUploadKey')||'';
+uploader.value=localStorage.getItem('teBlobUploader')||'';
+const fmt=n=>{if(!Number.isFinite(n))return'';const u=['B','KB','MB','GB','TB'];let i=0;while(n>=1024&&i<u.length-1){n/=1024;i++}return `${n.toFixed(i?1:0)} ${u[i]}`};
+function notifyPeers(video){
+  const payload={__trollSocialWire:1,id:`video-${Date.now()}-${Math.random().toString(36).slice(2)}`,kind:'troll_video_shared',video,createdAt:new Date().toISOString()};
+  try{window.parent.postMessage({type:'te_social_bridge_send',payload},'*')}catch{}
+  try{new BroadcastChannel('troll-engine-video-share').postMessage(payload)}catch{}
+}
+async function loadVideos(){
+  videos.innerHTML='<p>読み込み中…</p>';
+  try{
+    const r=await fetch('/api/videos',{cache:'no-store'});const data=await r.json();if(!r.ok||!data.ok)throw new Error(data.error||'一覧を取得できません');
+    videos.innerHTML='';
+    if(!data.videos.length){videos.innerHTML='<p>共有動画はまだありません。</p>';return}
+    for(const v of data.videos){
+      const card=document.createElement('article');card.className='videoCard';
+      const vid=document.createElement('video');vid.controls=true;vid.preload='metadata';vid.src=v.url;
+      const name=document.createElement('strong');name.textContent=v.name;
+      const meta=document.createElement('div');meta.className='meta';meta.textContent=`${fmt(v.size)}  ${new Date(v.uploadedAt).toLocaleString()}`;
+      const link=document.createElement('a');link.href=v.url;link.target='_blank';link.rel='noopener';link.textContent='別画面で開く';link.style.color='#67e8f9';
+      card.append(vid,name,meta,link);videos.append(card);
+    }
+  }catch(e){videos.innerHTML=`<p>⚠️ ${e.message}</p>`}
+}
+uploadBtn.addEventListener('click',async()=>{
+  const f=file.files?.[0];if(!f){status.textContent='動画ファイルを選んでね。';return}
+  if(!apiKey.value.trim()){status.textContent='アップロードキーを入力してね。';return}
+  localStorage.setItem('teBlobUploadKey',apiKey.value.trim());localStorage.setItem('teBlobUploader',uploader.value.trim());
+  uploadBtn.disabled=true;status.textContent='アップロードを開始しています…';bar.style.width='0%';
+  try{
+    const pathname=`troll-engine/videos/${Date.now()}-${f.name.replace(/[^A-Za-z0-9._-]/g,'_')}`;
+    const blob=await upload(pathname,f,{access:'public',handleUploadUrl:'/api/videos',multipart:true,contentType:f.type,clientPayload:JSON.stringify({apiKey:apiKey.value.trim(),title:title.value.trim()||f.name,uploader:uploader.value.trim()||'Troll Engine user'}),onUploadProgress:p=>{bar.style.width=`${Math.round(p.percentage)}%`;status.textContent=`アップロード中 ${Math.round(p.percentage)}% (${fmt(p.loaded)} / ${fmt(p.total)})`}});
+    status.textContent='✅ 全端末共有が完了しました。';notifyPeers({url:blob.url,name:title.value.trim()||f.name,uploader:uploader.value.trim()||'Troll Engine user',contentType:f.type,size:f.size});file.value='';title.value='';await loadVideos();
+  }catch(e){status.textContent=`⚠️ ${e.message||'アップロードに失敗しました'}`}
+  finally{uploadBtn.disabled=false}
+});
+$('refreshBtn').addEventListener('click',loadVideos);
+window.addEventListener('message',e=>{if(e.data?.type==='te_social_bridge_data'&&e.data.payload?.kind==='troll_video_shared')loadVideos()});
+loadVideos();
+</script>
+</body>
+</html>
