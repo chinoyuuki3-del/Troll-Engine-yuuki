@@ -9,7 +9,7 @@ function setCors(req, res) {
   const origin = String(req.headers.origin || "");
   res.setHeader("Access-Control-Allow-Origin", allowed === "*" ? "*" : allowed);
   res.setHeader("Access-Control-Allow-Methods", "GET,POST,OPTIONS");
-  res.setHeader("Access-Control-Allow-Headers", "Content-Type,X-Troll-Engine-Key");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
   res.setHeader("Vary", "Origin");
   return allowed === "*" || !origin || origin === allowed;
 }
@@ -24,17 +24,39 @@ function parseBody(req) {
   return {};
 }
 
-function safeName(pathname) {
-  return String(pathname || "video")
-    .split("/")
-    .pop()
-    .replace(/[^A-Za-z0-9._-]/g, "_")
-    .slice(0, 120);
+function decodeBase64Url(value) {
+  try {
+    const normalized = String(value || "").replace(/-/g, "+").replace(/_/g, "/");
+    const padded = normalized + "=".repeat((4 - (normalized.length % 4)) % 4);
+    return Buffer.from(padded, "base64").toString("utf8");
+  } catch {
+    return "";
+  }
+}
+
+function parseMetadata(pathname) {
+  const basename = String(pathname || "").split("/").pop() || "video";
+  const parts = basename.split("~");
+  if (parts.length < 4) {
+    return { title: basename, uploader: "Troll Engine user", name: basename };
+  }
+  return {
+    title: decodeBase64Url(parts[1]) || parts[3],
+    uploader: decodeBase64Url(parts[2]) || "Troll Engine user",
+    name: parts.slice(3).join("~")
+  };
 }
 
 export default async function handler(req, res) {
   if (!setCors(req, res)) return send(res, 403, { ok: false, error: "Origin blocked" });
   if (req.method === "OPTIONS") return res.status(204).end();
+
+  if (!process.env.BLOB_READ_WRITE_TOKEN) {
+    return send(res, 503, {
+      ok: false,
+      error: "Vercel Blobストアがまだ接続されていません"
+    });
+  }
 
   try {
     if (req.method === "GET") {
@@ -43,14 +65,15 @@ export default async function handler(req, res) {
         .filter(blob => String(blob.contentType || "").startsWith("video/"))
         .sort((a, b) => new Date(b.uploadedAt) - new Date(a.uploadedAt))
         .map(blob => ({
+          ...parseMetadata(blob.pathname),
           url: blob.url,
           downloadUrl: blob.downloadUrl,
           pathname: blob.pathname,
-          name: safeName(blob.pathname),
           contentType: blob.contentType,
           size: blob.size,
           uploadedAt: blob.uploadedAt
         }));
+      res.setHeader("Cache-Control", "no-store");
       return send(res, 200, { ok: true, videos, hasMore: result.hasMore });
     }
 
@@ -58,23 +81,32 @@ export default async function handler(req, res) {
       return send(res, 405, { ok: false, error: "Method not allowed" });
     }
 
-    const body = parseBody(req);
+    if (!process.env.TROLL_ENGINE_API_KEY) {
+      return send(res, 503, {
+        ok: false,
+        error: "アップロードキーがVercelに設定されていません"
+      });
+    }
+
     const response = await handleUpload({
-      body,
+      body: parseBody(req),
       request: req,
       onBeforeGenerateToken: async (pathname, clientPayload) => {
-        const expectedKey = process.env.TROLL_ENGINE_API_KEY || "";
+        if (!String(pathname || "").startsWith(VIDEO_PREFIX)) {
+          throw new Error("Invalid video path");
+        }
+
         let payload = {};
         try {
           payload = clientPayload ? JSON.parse(clientPayload) : {};
         } catch {
           throw new Error("Invalid upload information");
         }
-        if (!expectedKey || payload.apiKey !== expectedKey) {
+
+        if (payload.apiKey !== process.env.TROLL_ENGINE_API_KEY) {
           throw new Error("Upload key is incorrect");
         }
 
-        const filename = safeName(pathname);
         return {
           allowedContentTypes: [
             "video/mp4",
@@ -85,15 +117,15 @@ export default async function handler(req, res) {
           maximumSizeInBytes: MAX_VIDEO_BYTES,
           addRandomSuffix: true,
           tokenPayload: JSON.stringify({
-            title: String(payload.title || filename).slice(0, 120),
-            uploader: String(payload.uploader || "Troll Engine user").slice(0, 80)
+            title: String(payload.title || "").slice(0, 120),
+            uploader: String(payload.uploader || "").slice(0, 80)
           })
         };
       },
       onUploadCompleted: async ({ blob, tokenPayload }) => {
-        console.log("Troll Engine Blob video uploaded", {
-          url: blob.url,
+        console.log("Troll Engine video uploaded", {
           pathname: blob.pathname,
+          url: blob.url,
           metadata: tokenPayload
         });
       }
