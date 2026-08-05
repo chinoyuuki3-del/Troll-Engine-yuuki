@@ -5,9 +5,11 @@
   "testers": [],
   "stable_version": "4.28.4",
   "release": {
-    "version": "4.29-beta.1",
-    "title": "Beta Lab & Network Core Update"
+    "version": "4.29-beta.2",
+    "title": "Blob Video Sharing Update",
+    "entry_file": "video-share.html",
+    "manifest": "data/updates/4.29-beta.2.json"
   },
-  "message": "安定版 v4.28.4 はそのまま利用できます。希望する端末だけ「v4.29ベータに参加する」をオンにすると、4.29-beta.1 の実験機能を試せます。",
-  "updated_at": "2026-08-01T15:05:00+09:00"
+  "message": "安定版 v4.28.4 とP2Pライブはそのまま利用できます。希望する端末だけベータへ参加すると、Vercel Blobを使った全端末共通の投稿動画共有を試せます。",
+  "updated_at": "2026-08-05T11:13:00+09:00"
 }
