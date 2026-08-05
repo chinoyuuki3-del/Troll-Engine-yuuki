@@ -1,0 +1,29 @@
+{
+  "app": "Troll Engine",
+  "version": "4.29-beta.2",
+  "channel": "beta",
+  "title": "Blob Video Sharing Update",
+  "published_at": "2026-08-05",
+  "status": "preview",
+  "entry_file": "video-share.html",
+  "requires": {
+    "vercel_blob": true,
+    "environment_variables": [
+      "BLOB_READ_WRITE_TOKEN",
+      "TROLL_ENGINE_API_KEY"
+    ]
+  },
+  "features": [
+    "投稿動画をVercel Blobへ直接アップロード",
+    "投稿済み動画を全端末共通の一覧へ表示",
+    "大容量動画はmultipart方式で送信",
+    "アップロード進行状況を表示",
+    "動画共有完了を既存P2Pブリッジへ通知",
+    "ライブ映像・音声のP2P方式は変更しない"
+  ],
+  "notes": [
+    "動画本体をGitHubへbase64保存する旧方式とは別系統です。",
+    "BlobストアをVercelプロジェクトへ接続するまでアップロードは利用できません。",
+    "このベータでは1ファイル最大5GBに制限しています。"
+  ]
+}
