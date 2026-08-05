@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Troll Engine Server</title>
   <style>
-    *{box-sizing:border-box}body{margin:0;min-height:100vh;display:grid;place-items:center;background:radial-gradient(circle at 50% 20%,#12304a,#020617 65%);color:#f8fafc;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;padding:20px}.card{width:min(720px,96vw);border:1px solid #38bdf866;border-radius:26px;background:#07111fe8;box-shadow:0 24px 90px #0009;padding:26px}.logo{font-size:56px}.kicker{color:#67e8f9;font-weight:900;letter-spacing:2px}.title{font-size:clamp(28px,7vw,52px);margin:5px 0 8px}.status{padding:13px;border-radius:14px;background:#0f172a;border:1px solid #334155;white-space:pre-wrap;line-height:1.6}.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}button,a.btn{border:0;border-radius:13px;padding:13px 17px;font-weight:900;text-decoration:none;cursor:pointer}.primary{background:linear-gradient(135deg,#00ffcc,#38bdf8);color:#00110d}.secondary{background:#334155;color:white}.note{color:#cbd5e1;line-height:1.7;font-size:14px}.small{color:#94a3b8;font-size:12px;margin-top:14px;word-break:break-all}
+    *{box-sizing:border-box}body{margin:0;min-height:100vh;display:grid;place-items:center;background:radial-gradient(circle at 50% 20%,#12304a,#020617 65%);color:#f8fafc;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;padding:20px}.card{width:min(720px,96vw);border:1px solid #38bdf866;border-radius:26px;background:#07111fe8;box-shadow:0 24px 90px #0009;padding:26px}.logo{font-size:56px}.kicker{color:#67e8f9;font-weight:900;letter-spacing:2px}.title{font-size:clamp(28px,7vw,52px);margin:5px 0 8px}.status{padding:13px;border-radius:14px;background:#0f172a;border:1px solid #334155;white-space:pre-wrap;line-height:1.6}.actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}@media(max-width:620px){.actions{grid-template-columns:1fr}}button,a.btn{border:0;border-radius:13px;padding:13px 17px;font-weight:900;text-decoration:none;cursor:pointer;text-align:center}.primary{background:linear-gradient(135deg,#00ffcc,#38bdf8);color:#00110d}.secondary{background:#334155;color:white}.note{color:#cbd5e1;line-height:1.7;font-size:14px}.small{color:#94a3b8;font-size:12px;margin-top:14px;word-break:break-all}
   </style>
 </head>
 <body>
@@ -13,10 +13,10 @@
     <div class="logo">🧌</div>
     <div class="kicker">VERCEL SERVER</div>
     <h1 class="title">Troll Engine</h1>
-    <p class="note">画面とAPIはVercel、コード・JSON・音声・動画の最終保存先はGitHubです。リアルタイム映像・音声は既存のPeerJS / WebRTCを使います。</p>
+    <p class="note">投稿動画はVercel Blobで全端末共有。リアルタイム映像・音声は既存のPeerJS / WebRTCを使います。</p>
     <div id="status" class="status">サーバーを確認しています…</div>
     <div class="actions">
-      <a class="btn primary" href="/">トロールエンジンを開く</a>
+      <a class="btn primary" href="/video-share.html">動画共有を開く</a>
       <button id="retry" class="secondary" type="button">再確認</button>
     </div>
     <div id="details" class="small"></div>
@@ -27,21 +27,16 @@ const detailsEl=document.getElementById('details');
 async function boot(){
   statusEl.textContent='サーバーを確認しています…';
   try{
-    const [healthRes,updateRes]=await Promise.all([
-      fetch('/api/health',{cache:'no-store'}),
-      fetch('/api/data?path=data/update.json',{cache:'no-store'})
-    ]);
-    const health=await healthRes.json();
-    const update=await updateRes.json();
-    if(!health.ok)throw new Error(health.error||'サーバー確認に失敗しました');
-    const info=update.value||{};
-    statusEl.textContent=`✅ Vercelサーバー稼働中\nGitHub: ${health.repository}\n保存チャンネル: ${health.branch}\n登録版: v${info.version||'不明'} ${info.title||''}`;
-    detailsEl.textContent=health.githubWriteReady
-      ?'GitHub書き込みAPI: 準備完了'
-      :'GitHub書き込みAPI: 環境変数の設定待ち（読み込みは利用可能）';
+    const response=await fetch('/api/health',{cache:'no-store'});
+    const health=await response.json();
+    if(!response.ok||!health.ok)throw new Error(health.error||'サーバー確認に失敗しました');
+    statusEl.textContent=`✅ Vercelサーバー稼働中\nアプリ: v${health.appVersion||'不明'}\nBlobストア: ${health.blobReady?'接続済み':'未接続'}\nアップロードキー: ${health.uploadKeyReady?'設定済み':'未設定'}\nライブ方式: P2P`;
+    detailsEl.textContent=health.videoShareReady
+      ?'動画共有API: 準備完了'
+      :'動画共有API: Vercel Blobとアップロードキーの設定待ち';
   }catch(error){
     statusEl.textContent='⚠️ '+error.message;
-    detailsEl.textContent='Vercelの環境変数とGitHub接続を確認してください。';
+    detailsEl.textContent='Vercelの環境変数とBlob接続を確認してください。';
   }
 }
 document.getElementById('retry').addEventListener('click',boot);
