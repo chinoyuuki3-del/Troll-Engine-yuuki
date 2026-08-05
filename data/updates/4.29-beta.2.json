@@ -1,0 +1,36 @@
+{
+  "app": "Troll Engine",
+  "version": "4.29-beta.2",
+  "channel": "beta",
+  "title": "Blob Video Sharing Update",
+  "published_at": "2026-08-05",
+  "status": "deployed-awaiting-storage",
+  "entry_file": "video-share.html",
+  "vercel_project": "troll-engine-yuuki",
+  "production_url": "https://troll-engine-yuuki.vercel.app",
+  "video_share_url": "https://troll-engine-yuuki.vercel.app/video-share.html",
+  "requires": {
+    "vercel_blob": true,
+    "environment_variables": [
+      "BLOB_READ_WRITE_TOKEN",
+      "TROLL_ENGINE_API_KEY"
+    ]
+  },
+  "features": [
+    "Vercelプロジェクトを新規作成して本番デプロイ",
+    "投稿動画をVercel Blobへ直接アップロード",
+    "投稿済み動画を全端末共通の一覧へ表示",
+    "大容量動画はmultipart方式で送信",
+    "アップロード進行状況を表示",
+    "動画タイトルと投稿者名を共有一覧へ保持",
+    "アップロードキーをブラウザへ保存しない安全設計",
+    "動画共有完了を既存P2Pブリッジへ通知",
+    "ライブ映像・音声のPeerJS / WebRTC P2P方式は変更しない"
+  ],
+  "notes": [
+    "本番ページとヘルスチェックAPIは稼働確認済みです。",
+    "BlobストアをVercelプロジェクトへ接続するまでアップロードは利用できません。",
+    "TROLL_ENGINE_API_KEYをVercelへ設定するまで投稿は許可されません。",
+    "このベータでは1ファイル最大5GBに制限しています。"
+  ]
+}
